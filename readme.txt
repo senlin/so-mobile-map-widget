@@ -14,7 +14,7 @@ This widget adds a mobile-optimised Google Static Map Image with a colored pin c
 
 SO Mobile Map Widget is meant for websites that target browsing via mobile devices. This widget adds a mobile-optimised Static Google Map Image with a colored pin centered on your destination. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional.
 
-The reason I developed the SO Mobile Map Widget as a plugin, is because while implementing the widget for a mobile framework I am building for the hospitality industry, I realised that this widget can come in handy for many other scenarios too. You can include it on your company website to help people find your office location from whereever in the city they are. A travel information site can use it to include maps of tourist attractions, bars and restaurants can use it, you can use it to direct people to your new home, it can even come in handy for if you organise a party with a location that is kept secret till the very last moment!
+The reason I developed the SO Mobile Map Widget as a plugin, is because while implementing the widget for a mobile framework I am building for the hospitality industry, I realised that this widget can come in handy for many other scenarios too. You can include it on your company website to help people find your office location from wherever in the city they are. A travel information site can use it to include maps of tourist attractions, bars and restaurants can use it, you can use it to direct people to your new home, it can even come in handy for if you organise a party with a location that is kept secret till the very last moment!
 
 I used the [Static Maps API V2 Developer Guide](https://developers.google.com/maps/documentation/staticmaps/) to build the URLs needed to show the Static Map Image as well as the proper link. 
 
@@ -42,7 +42,7 @@ You can of course also visit your site from a desktop or laptop computer, but as
 
 == Installation ==
 
-= Wordpress =
+= WordPress =
 
 Quick installation: [Install now](http://coveredwebservices.com/wp-plugin-install/?plugin=so-mobile-map-widget) !
 
@@ -74,7 +74,7 @@ A few settings are done by default: the scale of the image is set to 2, to optim
 
 = Do I need a Google Static Maps API-key? =
 
-The Google Static Maps API-key is optional, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get they API-key.
+The Google Static Maps API-key is optional, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get the API-key.
 
 = Where can I sign up for the Google Static Maps API-key? =
 

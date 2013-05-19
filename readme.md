@@ -42,7 +42,7 @@ You can of course also visit your site from a desktop or laptop computer, but as
 
 == Installation ==
 
-= Wordpress =
+= WordPress =
 
 Quick installation: [Install now](http://coveredwebservices.com/wp-plugin-install/?plugin=so-mobile-map-widget) !
 
@@ -74,7 +74,7 @@ A few settings are done by default: the scale of the image is set to 2, to optim
 
 = Do I need a Google Static Maps API-key? =
 
-The Google Static Maps API-key is optional, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get they API-key.
+The Google Static Maps API-key is optional, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get the API-key.
 
 = Where can I sign up for the Google Static Maps API-key? =
 
