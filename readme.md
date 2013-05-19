@@ -1,16 +1,12 @@
-=== SO Mobile Map Widget ===
-* Contributors: senlin
-* Donate link: http://senl.in/PPd0na
-* Tags: google maps, maps, mobile, image
-* Requires at least: 3.3
-* Tested up to: 3.6-beta3
-* Stable tag: 0.2
-* License: GPLv2 or later
-* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+# SO Mobile Map Widget
+### Version 0.2
+### requires at least WordPress 3.3; tested up to 3.6-beta3
 
-This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.
+* Author: Piet Bos (@senlin)
 
-== Description ==
+This WordPress widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.
+
+## Description
 
 SO Mobile Map Widget is meant for websites that target browsing via mobile devices. This widget adds a mobile-optimised Static Google Map Image with a colored pin centered on your destination. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional.
 
@@ -40,15 +36,13 @@ Now you can save the widget and visit your website from a mobile device. When yo
 
 You can of course also visit your site from a desktop or laptop computer, but as those devices do not have a GPS locator, they won't automatically fill in your Current Location.
 
-== Installation ==
-
-= WordPress =
+## Installation
 
 Quick installation: [Install now](http://coveredwebservices.com/wp-plugin-install/?plugin=so-mobile-map-widget) !
 
  &hellip; OR &hellip;
 
-Search for "so mobile map widget" and install with the **Plugins > Add New** back-end page.
+Go to **Plugins > Add New** in your WordPress Dashboard, do a search for "so mobile map widget" and install it.
 
  &hellip; OR &hellip;
 
@@ -62,48 +56,49 @@ Follow these steps:
 
 Done!
 
+## Frequently Asked Questions
 
-== Frequently Asked Questions ==
-
-= Where is the settings page? =
+### Where is the settings page?
 
 You can stop looking, there is none. 
 You can adjust all the necessary settings in the widget itself. 
 
 A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions; the link opens in a new tab, if I get complaints about that I will make it optional; sensor is set to true as we're dealing with mobile devices here.
 
-= Do I need a Google Static Maps API-key? =
+### Do I need a Google Static Maps API-key?
 
 The Google Static Maps API-key is optional, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get the API-key.
 
-= Where can I sign up for the Google Static Maps API-key? =
+### Where can I sign up for the Google Static Maps API-key?
 
 See above.
 
-== Other Notes ==
+## License
 
-Background image of banner-772x250.png used as banner image on WordPress Plugin Repository via [uitdragerij](http://www.flickr.com/photos/uitdragerij/7516233128/)
+* License: GPLv2 or later
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-== Screenshots ==
+## Donations
 
-1. Widget Settings in the WordPress backend
-2. The widget showing the Google Static Map Image of your destination
-3. Manually enter your Current Location (for example if you don't have your GPS turned on)
-4. Choose the most suitable route and via which mode of transport (where available)
-5. The start of the route including directions at the bottom of the screen
-6. Choosing a different route on Satellite view
+* Donate link: http://senl.in/PPd0na
 
-== Upgrade Notice ==
+## Connect with me through
 
-version 0.2 - added optional description field
+[Github](https://github.com/senlin) 
 
-== Changelog ==
+[Google+](http://plus.google.com/u/0/108543145122756748887) 
 
-= 0.2 =
-Added optional description field
+[WordPress](http://profiles.wordpress.org/senlin/) 
 
-= 0.1 =
-Release version
+[Website](http://senlinonline.com)
+
+## Changelog
+
+**v0.2**
+- added optional description field
+
+**v0.1**
+- release version
 
 ## Screenshots
 
