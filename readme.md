@@ -1,12 +1,12 @@
 === SO Mobile Map Widget ===
-Contributors: senlin
-Donate link: http://senl.in/PPd0na
-Tags: google maps, maps, mobile, image
-Requires at least: 3.3
-Tested up to: 3.6-beta3
-Stable tag: 0.2
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+* Contributors: senlin
+* Donate link: http://senl.in/PPd0na
+* Tags: google maps, maps, mobile, image
+* Requires at least: 3.3
+* Tested up to: 3.6-beta3
+* Stable tag: 0.2
+* License: GPLv2 or later
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.
 
@@ -14,7 +14,7 @@ This widget adds a mobile-optimised Google Static Map Image with a colored pin c
 
 SO Mobile Map Widget is meant for websites that target browsing via mobile devices. This widget adds a mobile-optimised Static Google Map Image with a colored pin centered on your destination. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional.
 
-The reason I developed the SO Mobile Map Widget as a plugin, is because while implementing the widget for a mobile framework I am building for the hospitality industry, I realised that this widget can come in handy for many other scenarios too. You can include it on your company website to help people find your office location from whereever in the city they are. A travel information site can use it to include maps of tourist attractions, bars and restaurants can use it, you can use it to direct people to your new home, it can even come in handy for if you organise a party with a location that is kept secret till the very last moment!
+The reason I developed the SO Mobile Map Widget as a plugin, is because while implementing the widget for a mobile framework I am building for the hospitality industry, I realised that this widget can come in handy for many other scenarios too. You can include it on your company website to help people find your office location from wherever in the city they are. A travel information site can use it to include maps of tourist attractions, bars and restaurants can use it, you can use it to direct people to your new home, it can even come in handy for if you organise a party with a location that is kept secret till the very last moment!
 
 I used the [Static Maps API V2 Developer Guide](https://developers.google.com/maps/documentation/staticmaps/) to build the URLs needed to show the Static Map Image as well as the proper link. 
 
@@ -68,7 +68,7 @@ Done!
 = Where is the settings page? =
 
 You can stop looking, there is none. 
-You can adjust all the ncessary settings in the widget itself. 
+You can adjust all the necessary settings in the widget itself. 
 
 A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions; the link opens in a new tab, if I get complaints about that I will make it optional; sensor is set to true as we're dealing with mobile devices here.
 
@@ -91,7 +91,7 @@ Background image of banner-772x250.png used as banner image on WordPress Plugin 
 3. Manually enter your Current Location (for example if you don't have your GPS turned on)
 4. Choose the most suitable route and via which mode of transport (where available)
 5. The start of the route including directions at the bottom of the screen
-6. Choosing a different route on Satelite view
+6. Choosing a different route on Satellite view
 
 == Upgrade Notice ==
 
@@ -104,3 +104,11 @@ Added optional description field
 
 = 0.1 =
 Release version
+
+## Screenshots
+
+Preview of the widget in the backend and on the frontend.
+
+![Widget Settings in the WordPress backend.](assets/screenshot-1.jpg "Widget Backend")
+---
+![The widget showing the Google Static Map Image of your destination (frontend).](assets/screenshot-2.jpg "Widget Frontend")
