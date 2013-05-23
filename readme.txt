@@ -1,11 +1,14 @@
 === SO Mobile Map Widget ===
+Author URI: http://senlinonline.com
+Plugin URI: http://github.com/senlin/so-mobile-map-widget
 Contributors: senlin
 Donate link: http://senl.in/PPd0na
 Tags: google maps, maps, mobile, image
 Requires at least: 3.3
 Tested up to: 3.6-beta3
+
 Stable tag: 0.2
-License: GPLv2 or later
+License: GNU Version 2 or Any Later Version
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.
