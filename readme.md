@@ -95,6 +95,9 @@ See above.
 
 ## Changelog
 
+**upcoming v0.3**
+- add refresh=true to static map image, enhancement, new parameter of Google Static Map Image API
+
 **v0.2**
 - added optional description field
 
