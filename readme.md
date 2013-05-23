@@ -76,7 +76,7 @@ See above.
 
 ## License
 
-* License: GPLv2 or later
+* License: GNU Version 2 or Any Later Version
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Donations
