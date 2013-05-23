@@ -42,7 +42,7 @@ class SO_MobileMapWidget extends WP_Widget {
 	}
 	
 	echo '<div class="so_mmw_widget_content">';
-		echo '<a href="http://maps.google.com/maps?daddr=' . $daddr . '&markers=color:' . $color . '%7C' . $daddr . '&sensor=true" target="_blank"><img src="http://maps.googleapis.com/maps/api/staticmap?center=' . $daddr . '&zoom=' . $zoom . '&size=' . $width . 'x' . $height . '&scale=2&markers=color:' . $color . '%7C' . $daddr . '&sensor=true';
+		echo '<a href="http://maps.google.com/maps?daddr=' . $daddr . '&markers=color:' . $color . '%7C' . $daddr . '&sensor=true" target="_blank"><img src="http://maps.googleapis.com/maps/api/staticmap?center=' . $daddr . '&zoom=' . $zoom . '&size=' . $width . 'x' . $height . '&scale=2&markers=color:' . $color . '%7C' . $daddr . '&sensor=true&visual_refresh=true';
 		if($apikey != '')
 			echo '&key=' . $apikey;
 		echo '" width="' . $width . '" height="' . $height . '" /></a>';
