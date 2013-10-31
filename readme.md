@@ -97,6 +97,7 @@ See above.
 
 **upcoming v0.3**
 - add refresh=true to static map image, enhancement, new parameter of Google Static Map Image API
+- HTML5 Validation (@jecdk)
 
 **v0.2**
 - added optional description field
