@@ -42,10 +42,10 @@ class SO_MobileMapWidget extends WP_Widget {
 	}
 	
 	echo '<div class="so_mmw_widget_content">';
-		echo '<a href="http://maps.google.com/maps?daddr=' . $daddr . '&markers=color:' . $color . '%7C' . $daddr . '&sensor=true" target="_blank"><img src="http://maps.googleapis.com/maps/api/staticmap?center=' . $daddr . '&zoom=' . $zoom . '&size=' . $width . 'x' . $height . '&scale=2&markers=color:' . $color . '%7C' . $daddr . '&sensor=true&visual_refresh=true';
+		echo '<a href="http://maps.google.com/maps?daddr=' . $daddr . '&amp;markers=color:' . $color . '%7C' . $daddr . '&amp;sensor=true" target="_blank"><img src="http://maps.googleapis.com/maps/api/staticmap?center=' . $daddr . '&amp;zoom=' . $zoom . '&amp;size=' . $width . 'x' . $height . '&amp;scale=2&amp;markers=color:' . $color . '%7C' . $daddr . '&amp;sensor=true&amp;visual_refresh=true';
 		if($apikey != '')
-			echo '&key=' . $apikey;
-		echo '" width="' . $width . '" height="' . $height . '" /></a>';
+			echo '&amp;key=' . $apikey;
+		echo '" width="' . $width . '" height="' . $height . '" alt="" /></a>';
 		if ( $description != '' ) {
 			echo '<div class="description">' . $description . '</div>';
 		}
