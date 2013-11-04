@@ -1,8 +1,8 @@
 # SO Mobile Map Widget
 
-###### Version 0.2
-###### requires at least WordPress 3.3
-###### tested up to 3.6-beta3
+###### Version 0.4
+###### requires at least WordPress 3.6
+###### tested up to 3.7.1
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 This WordPress widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.
@@ -95,15 +95,22 @@ See above.
 
 ## Changelog
 
-**upcoming v0.3**
-- add refresh=true to static map image, enhancement, new parameter of Google Static Map Image API
-- HTML5 Validation (@jecdk)
+### v0.4
 
-**v0.2**
-- added optional description field
+* Add version check
+* Update minimum required version (WP 3.6)
+* Compatible up to 3.7.1
+* add .pot and .po files
+* [HTML5 Validation](https://github.com/so-wp/so-mobile-map-widget/issues/3) suggested by [jecdk](https://github.com/jecdk)
+* add [visual refresh parameter](https://github.com/so-wp/so-mobile-map-widget/issues/2)
 
-**v0.1**
-- release version
+### v0.2
+
+* added optional description field
+
+###v0.1
+
+* release version
 
 ## Screenshots
 

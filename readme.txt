@@ -1,14 +1,11 @@
 === SO Mobile Map Widget ===
-Author URI: http://senlinonline.com
-Plugin URI: http://github.com/senlin/so-mobile-map-widget
 Contributors: senlin
 Donate link: http://senl.in/PPd0na
 Tags: google maps, maps, mobile, image
-Requires at least: 3.3
-Tested up to: 3.6-beta3
-
-Stable tag: 0.2
-License: GNU Version 2 or Any Later Version
+Requires at least: 3.6
+Tested up to: 3.7.1
+Stable tag: 0.4
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.
@@ -17,7 +14,7 @@ This widget adds a mobile-optimised Google Static Map Image with a colored pin c
 
 SO Mobile Map Widget is meant for websites that target browsing via mobile devices. This widget adds a mobile-optimised Static Google Map Image with a colored pin centered on your destination. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional.
 
-The reason I developed the SO Mobile Map Widget as a plugin, is because while implementing the widget for a mobile framework I am building for the hospitality industry, I realised that this widget can come in handy for many other scenarios too. You can include it on your company website to help people find your office location from wherever in the city they are. A travel information site can use it to include maps of tourist attractions, bars and restaurants can use it, you can use it to direct people to your new home, it can even come in handy for if you organise a party with a location that is kept secret till the very last moment!
+The reason I developed the SO Mobile Map Widget as a plugin, is because while implementing the widget for a mobile framework I am building for the hospitality industry, I realised that this widget can come in handy for many other scenarios too. You can include it on your company website to help people find your office location from whereever in the city they are. A travel information site can use it to include maps of tourist attractions, bars and restaurants can use it, you can use it to direct people to your new home, it can even come in handy for if you organise a party with a location that is kept secret till the very last moment!
 
 I used the [Static Maps API V2 Developer Guide](https://developers.google.com/maps/documentation/staticmaps/) to build the URLs needed to show the Static Map Image as well as the proper link. 
 
@@ -43,9 +40,16 @@ Now you can save the widget and visit your website from a mobile device. When yo
 
 You can of course also visit your site from a desktop or laptop computer, but as those devices do not have a GPS locator, they won't automatically fill in your Current Location.
 
+I have decided to only support this plugin through [Github](https://github.com/so-wp/so-mobile-map-widget/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
+
+**PLEASE DO NOT POST YOUR ISSUES VIA THE WORDPRESS FORUMS**
+
+Thanks for your understanding and cooperation.
+
+
 == Installation ==
 
-= WordPress =
+= Wordpress =
 
 Quick installation: [Install now](http://coveredwebservices.com/wp-plugin-install/?plugin=so-mobile-map-widget) !
 
@@ -77,11 +81,15 @@ A few settings are done by default: the scale of the image is set to 2, to optim
 
 = Do I need a Google Static Maps API-key? =
 
-The Google Static Maps API-key is optional, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get the API-key.
+The Google Static Maps API-key is optional, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get they API-key.
 
 = Where can I sign up for the Google Static Maps API-key? =
 
 See above.
+
+= I have an issue with this plugin, where can I get support? =
+
+Please open an issue on [Github](https://github.com/so-wp/so-mobile-map-widget/issues)
 
 == Other Notes ==
 
@@ -96,14 +104,36 @@ Background image of banner-772x250.png used as banner image on WordPress Plugin 
 5. The start of the route including directions at the bottom of the screen
 6. Choosing a different route on Satelite view
 
-== Upgrade Notice ==
-
-version 0.2 - added optional description field
-
 == Changelog ==
 
+= 0.4 =
+
+* Add version check
+* Update minimum required version (WP 3.6)
+* Compatible up to 3.7.1
+* add .pot and .po files
+* [HTML5 Validation](https://github.com/so-wp/so-mobile-map-widget/issues/3) suggested by [jecdk](https://github.com/jecdk)
+* add [visual refresh parameter](https://github.com/so-wp/so-mobile-map-widget/issues/2)
+
+= 0.3 =
+
+* Compatible with WP 3.6
+* Prevent direct file access
+
 = 0.2 =
-Added optional description field
+
+* Added optional description field
 
 = 0.1 =
-Release version
+
+* Release version
+
+== Upgrade Notice ==
+
+= 0.4 =
+
+* upped minimum required version to WP 3.6
+
+= 0.3 =
+
+* added security
