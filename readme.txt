@@ -4,7 +4,7 @@ Donate link: http://senl.in/PPd0na
 Tags: google maps, maps, mobile, image
 Requires at least: 3.6
 Tested up to: 3.7.1
-Stable tag: 0.4
+Stable tag: 0.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +105,10 @@ Background image of banner-772x250.png used as banner image on WordPress Plugin 
 6. Choosing a different route on Satelite view
 
 == Changelog ==
+
+= 0.4.1 =
+
+* change text domain to prepare for language packs (via Otto - http://otto42.com/el)
 
 = 0.4 =
 

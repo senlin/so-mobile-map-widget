@@ -1,6 +1,6 @@
 # SO Mobile Map Widget
 
-###### Version 0.4
+###### Version 0.4.1
 ###### requires at least WordPress 3.6
 ###### tested up to 3.7.1
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -94,6 +94,10 @@ See above.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 0.4.1
+
+* change text domain to prepare for language packs (via Otto - http://otto42.com/el)
 
 ### v0.4
 

@@ -2,9 +2,11 @@
 Plugin Name: SO Mobile Map Widget
 Plugin URI: http://wpti.ps/plugins/so-mobile-map-widget-plugin/
 Description: This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional. 
-Version: 0.4
+Version: 0.4.1
 Author: Piet Bos
 Author URI: http://senlinonline.com
+Text Domain: so-mobile-map-widget
+Domain Path: /languages
 */
 
 /** Prevent direct access to files */
@@ -49,7 +51,7 @@ function so_mmw_check_admin_notices()
 	// this plugin's name
 	$name = get_file_data( __FILE__, array ( 'Plugin Name' ), 'plugin' );
 
-	printf( __( '<div class="error"><p>%1$s</p><p><i>%2$s</i> has been deactivated.</p></div>', 'sovc' ),
+	printf( __( '<div class="error"><p>%1$s</p><p><i>%2$s</i> has been deactivated.</p></div>', 'so-mobile-map-widget' ),
 		join( '</p><p>', $errors ),
 		$name[0]
 	);
@@ -58,7 +60,7 @@ function so_mmw_check_admin_notices()
 
 /** add plugin textdomain */
 function so_mmw_init() {
-	load_plugin_textdomain('so_mmw', false, basename( dirname( __FILE__ ) ) . '/languages' );
+	load_plugin_textdomain('so_mmw', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 add_action('plugins_loaded', 'so_mmw_init');
 
@@ -66,8 +68,8 @@ class SO_MobileMapWidget extends WP_Widget {
 
 /** constructor */
 	function SO_MobileMapWidget() {
-		$widget_ops = array( 'description' => __('This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.', 'so_mmw' ) );
-		parent::WP_Widget(false, __( 'SO Mobile Map Widget', 'so_mmw' ), $widget_ops );      
+		$widget_ops = array( 'description' => __('This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.', 'so-mobile-map-widget' ) );
+		parent::WP_Widget(false, __( 'SO Mobile Map Widget', 'so-mobile-map-widget' ), $widget_ops );      
 	}
 	
 	/** @see WP_Widget::widget */
@@ -130,35 +132,35 @@ class SO_MobileMapWidget extends WP_Widget {
 		$description = esc_attr($instance['description']);
 		?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional):', 'so_mmw' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional):', 'so-mobile-map-widget' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $title; ?>" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'daddr' ); ?>"><?php _e( 'Destination, map will also be centered on this point; check your coordinates via <a href="http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html" target="_blank">this site</a>.', 'so_mmw' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'daddr' ); ?>"><?php _e( 'Destination, map will also be centered on this point; check your coordinates via <a href="http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html" target="_blank">this site</a>.', 'so-mobile-map-widget' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'daddr' ); ?>" value="<?php echo $daddr; ?>" class="widefat" id="<?php echo $this->get_field_id( 'daddr' ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'color' ); ?>"><?php _e( 'Color, choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.', 'so_mmw' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'color' ); ?>"><?php _e( 'Color, choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.', 'so-mobile-map-widget' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'color' ); ?>" value="<?php echo $color; ?>" class="widefat" id="<?php echo $this->get_field_id( 'color' ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'zoom' ); ?>"><?php _e( 'Zoom level, from 0 (world view) to 21 (streetview); from 15 and up seems to be good for locations in larger cities, but best to check and play around with it a bit.', 'so_mmw' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'zoom' ); ?>"><?php _e( 'Zoom level, from 0 (world view) to 21 (streetview); from 15 and up seems to be good for locations in larger cities, but best to check and play around with it a bit.', 'so-mobile-map-widget' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'zoom' ); ?>" value="<?php echo $zoom; ?>" class="widefat" id="<?php echo $this->get_field_id( 'zoom' ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'width' ); ?>"><?php _e( 'Width in px:', 'so_mmw' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'width' ); ?>"><?php _e( 'Width in px:', 'so-mobile-map-widget' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'width' ); ?>" value="<?php echo $width; ?>" class="widefat" id="<?php echo $this->get_field_id( 'width' ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'height' ); ?>"><?php _e( 'Height in px:', 'so_mmw' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'height' ); ?>"><?php _e( 'Height in px:', 'so-mobile-map-widget' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'height' ); ?>" value="<?php echo $height; ?>" class="widefat" id="<?php echo $this->get_field_id( 'height' ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'apikey' ); ?>"><?php _e( 'Google Static Maps API Key (optional):', 'so_mmw' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'apikey' ); ?>"><?php _e( 'Google Static Maps API Key (optional):', 'so-mobile-map-widget' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'apikey' ); ?>" value="<?php echo $apikey; ?>" class="widefat" id="<?php echo $this->get_field_id( 'apikey' ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Description shows under map image (optional):', 'so_mmw' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Description shows under map image (optional):', 'so-mobile-map-widget' ); ?></label>
             <input type="textarea" name="<?php echo $this->get_field_name( 'description' ); ?>" value="<?php echo $description; ?>" class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" />
         </p>
         <?php
