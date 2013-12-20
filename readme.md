@@ -1,8 +1,8 @@
 # SO Mobile Map Widget
 
-###### Version 0.4.1
+###### Version 0.4.2
 ###### requires at least WordPress 3.6
-###### tested up to 3.7.1
+###### tested up to 3.8
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### Link to [WordPress Repository](http://wordpress.org/plugins/so-mobile-map-widget/)
 
