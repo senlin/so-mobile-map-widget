@@ -96,6 +96,10 @@ See above.
 
 ## Changelog
 
+### 0.4.2
+
+* Update minimum required version (WP 3.8)
+
 ### 0.4.1
 
 * change text domain to prepare for language packs (via Otto - http://otto42.com/el)
