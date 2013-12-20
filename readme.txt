@@ -108,7 +108,7 @@ Background image of banner-772x250.png used as banner image on WordPress Plugin 
 
 = 0.4.2 =
 
-* Update minimum required version (WP 3.8)
+* Compatible up to WP 3.8
 
 = 0.4.1 =
 

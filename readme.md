@@ -98,7 +98,7 @@ See above.
 
 ### 0.4.2
 
-* Update minimum required version (WP 3.8)
+* Compatible up to WP 3.8
 
 ### 0.4.1
 
