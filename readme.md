@@ -1,10 +1,11 @@
 # SO Mobile Map Widget
 
-###### Version 0.4.2
+###### Version 2013.12.23
 ###### requires at least WordPress 3.6
 ###### tested up to 3.8
 ###### Author: [Piet Bos](https://github.com/senlin)
-###### Link to [WordPress Plugins Repository](http://wordpress.org/plugins/so-mobile-map-widget/)
+###### [Stable Version](http://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
+###### [Plugin homepage](http://so-wp.com/plugin/so-mobile-map-widget)
 
 This WordPress widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.
 
@@ -38,26 +39,6 @@ Now you can save the widget and visit your website from a mobile device. When yo
 
 You can of course also visit your site from a desktop or laptop computer, but as those devices do not have a GPS locator, they won't automatically fill in your Current Location.
 
-## Installation
-
-Quick installation: [Install now](http://coveredwebservices.com/wp-plugin-install/?plugin=so-mobile-map-widget) !
-
- &hellip; OR &hellip;
-
-Go to **Plugins > Add New** in your WordPress Dashboard, do a search for "so mobile map widget" and install it.
-
- &hellip; OR &hellip;
-
-Follow these steps:
-
- 1. Download zip file.
-
- 2. Upload the zip file via the Plugins > Add New > Upload page &hellip; OR &hellip; unpack and upload with your favourite FTP client to the /plugins/ folder.
-
- 3. Activate the plugin on the Plug-ins page.
-
-Done!
-
 ## Frequently Asked Questions
 
 ### Where is the settings page?
@@ -82,13 +63,13 @@ See above.
 
 ## Donations
 
-* Donate link: http://senl.in/PPd0na
+* Donate link: http://so-wp.com/donations
 
 ## Connect with me through
 
 [Github](https://github.com/senlin) 
 
-[Google+](http://plus.google.com/u/0/108543145122756748887) 
+[Google+](http://plus.google.com/+PietBos) 
 
 [WordPress](http://profiles.wordpress.org/senlin/) 
 
@@ -96,9 +77,10 @@ See above.
 
 ## Changelog
 
-### 0.4.2
+### 2013.12.23
 
 * Compatible up to WP 3.8
+* new format version numbers
 
 ### 0.4.1
 
