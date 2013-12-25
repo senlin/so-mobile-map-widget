@@ -81,7 +81,7 @@ See above.
 
 ## Changelog
 
-### 2013.12.23
+### 2013.12.25
 
 * Tested up to WP 3.9-alpha
 * Change format version numbers

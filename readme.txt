@@ -110,7 +110,7 @@ Background image of banner-772x250.png used as banner image on WordPress Plugin 
 
 == Changelog ==
 
-= 2013.12.23 =
+= 2013.12.25 =
 
 * Tested up to WP 3.9-alpha
 * Change format version numbers
