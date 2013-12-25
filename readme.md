@@ -1,8 +1,8 @@
 # SO Mobile Map Widget
 
-###### Version 2013.12.23
+###### Version 2013.12.25
 ###### requires at least WordPress 3.6
-###### tested up to 3.8
+###### tested up to 3.9-alpha
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
 ###### [Plugin homepage](http://so-wp.com/plugin/so-mobile-map-widget)
@@ -48,6 +48,10 @@ You can adjust all the necessary settings in the widget itself.
 
 A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions; the link opens in a new tab, if I get complaints about that I will make it optional; sensor is set to true as we're dealing with mobile devices here.
 
+### After adding the widget, why does it show some place in China?
+
+Since 2013.12.25 I have added some default values to the widget to get rid of an `undefined index` error. As I have been living in Beijing, China for the past 15 years and I love hiking the wild Great Wall, I thought it most appropriate to add one of my favourite spots as a default setting. Just use the coordinates that you need to replace the default ones. The same goes for the other default values of the widget.
+
 ### Do I need a Google Static Maps API-key?
 
 The Google Static Maps API-key is optional, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get the API-key.
@@ -79,8 +83,9 @@ See above.
 
 ### 2013.12.23
 
-* Compatible up to WP 3.8
-* new format version numbers
+* Tested up to WP 3.9-alpha
+* Change format version numbers
+* Add widget default values to get rid of `undefined index` error
 
 ### 0.4.1
 

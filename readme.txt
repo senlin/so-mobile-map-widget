@@ -1,10 +1,10 @@
 === SO Mobile Map Widget ===
 Contributors: senlin
-Donate link: http://senl.in/PPd0na
+Donate link: http://so-wp.com/donations
 Tags: google maps, maps, mobile, image
 Requires at least: 3.6
-Tested up to: 3.8
-Stable tag: 0.4.2
+Tested up to: 3.9-alpha
+Stable tag: 2013.12.25
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,7 +40,7 @@ Now you can save the widget and visit your website from a mobile device. When yo
 
 You can of course also visit your site from a desktop or laptop computer, but as those devices do not have a GPS locator, they won't automatically fill in your Current Location.
 
-I have decided to only support this plugin through [Github](https://github.com/so-wp/so-mobile-map-widget/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
+I have decided to only support this plugin through [Github](https://github.com/senlin/so-mobile-map-widget/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
 **PLEASE DO NOT POST YOUR ISSUES VIA THE WORDPRESS FORUMS**
 
@@ -79,6 +79,10 @@ You can adjust all the ncessary settings in the widget itself.
 
 A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions; the link opens in a new tab, if I get complaints about that I will make it optional; sensor is set to true as we're dealing with mobile devices here.
 
+= After adding the widget, why does it show some place in China? =
+
+Since 2013.12.25 I have added some default values to the widget to get rid of an `undefined index` error. As I have been living in Beijing, China for the past 15 years and I love hiking the wild Great Wall, I thought it most appropriate to add one of my favourite spots as a default setting. Just use the coordinates that you need to replace the default ones. The same goes for the other default values of the widget.
+
 = Do I need a Google Static Maps API-key? =
 
 The Google Static Maps API-key is optional, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get they API-key.
@@ -89,7 +93,7 @@ See above.
 
 = I have an issue with this plugin, where can I get support? =
 
-Please open an issue on [Github](https://github.com/so-wp/so-mobile-map-widget/issues)
+Please open an issue on [Github](https://github.com/senlin/so-mobile-map-widget/issues)
 
 == Other Notes ==
 
@@ -105,6 +109,12 @@ Background image of banner-772x250.png used as banner image on WordPress Plugin 
 6. Choosing a different route on Satelite view
 
 == Changelog ==
+
+= 2013.12.23 =
+
+* Tested up to WP 3.9-alpha
+* Change format version numbers
+* Add widget default values to get rid of `undefined index` error
 
 = 0.4.2 =
 
