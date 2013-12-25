@@ -1,10 +1,11 @@
 # SO Mobile Map Widget
 
-###### Version 0.4.1
+###### Version 2013.12.25
 ###### requires at least WordPress 3.6
-###### tested up to 3.7.1
+###### tested up to 3.9-alpha
 ###### Author: [Piet Bos](https://github.com/senlin)
-###### Link to [WordPress Repository](http://wordpress.org/plugins/so-mobile-map-widget/)
+###### [Stable Version](http://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
+###### [Plugin homepage](http://so-wp.com/plugin/so-mobile-map-widget)
 
 This WordPress widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.
 
@@ -38,26 +39,6 @@ Now you can save the widget and visit your website from a mobile device. When yo
 
 You can of course also visit your site from a desktop or laptop computer, but as those devices do not have a GPS locator, they won't automatically fill in your Current Location.
 
-## Installation
-
-Quick installation: [Install now](http://coveredwebservices.com/wp-plugin-install/?plugin=so-mobile-map-widget) !
-
- &hellip; OR &hellip;
-
-Go to **Plugins > Add New** in your WordPress Dashboard, do a search for "so mobile map widget" and install it.
-
- &hellip; OR &hellip;
-
-Follow these steps:
-
- 1. Download zip file.
-
- 2. Upload the zip file via the Plugins > Add New > Upload page &hellip; OR &hellip; unpack and upload with your favourite FTP client to the /plugins/ folder.
-
- 3. Activate the plugin on the Plug-ins page.
-
-Done!
-
 ## Frequently Asked Questions
 
 ### Where is the settings page?
@@ -66,6 +47,10 @@ You can stop looking, there is none.
 You can adjust all the necessary settings in the widget itself. 
 
 A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions; the link opens in a new tab, if I get complaints about that I will make it optional; sensor is set to true as we're dealing with mobile devices here.
+
+### After adding the widget, why does it show some place in China?
+
+Since 2013.12.25 I have added some default values to the widget to get rid of an `undefined index` error. As I have been living in Beijing, China for the past 15 years and I love hiking the wild Great Wall, I thought it most appropriate to add one of my favourite spots as a default setting. Just use the coordinates that you need to replace the default ones. The same goes for the other default values of the widget.
 
 ### Do I need a Google Static Maps API-key?
 
@@ -82,19 +67,25 @@ See above.
 
 ## Donations
 
-* Donate link: http://senl.in/PPd0na
+* Donate link: http://so-wp.com/donations
 
 ## Connect with me through
 
 [Github](https://github.com/senlin) 
 
-[Google+](http://plus.google.com/u/0/108543145122756748887) 
+[Google+](http://plus.google.com/+PietBos) 
 
 [WordPress](http://profiles.wordpress.org/senlin/) 
 
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2013.12.23
+
+* Tested up to WP 3.9-alpha
+* Change format version numbers
+* Add widget default values to get rid of `undefined index` error
 
 ### 0.4.1
 
