@@ -78,13 +78,13 @@ class SO_MobileMapWidget extends WP_Widget {
 		
 	// these are our widget options
 	$title = apply_filters( 'widget_title', $instance['title'] );
-	$daddr = $instance['daddr'];
-	$color = $instance['color'];
-	$zoom = $instance['zoom'];
-	$width = $instance['width'];
-	$height = $instance['height'];
-	$apikey = $instance['apikey'];
-	$description = apply_filters( 'widget_description', $instance['description'] );
+	$daddr = isset( $instance['daddr'] ) ? esc_attr( $instance['daddr'] ) : '';
+	$color = isset( $instance['color'] ) ? esc_attr( $instance['color'] ) : '';
+	$zoom = isset( $instance['zoom'] ) ? esc_attr( $instance['zoom'] ) : '';
+	$width = isset( $instance['width'] ) ? esc_attr( $instance['width'] ) : '';
+	$height = isset( $instance['height'] ) ? esc_attr( $instance['height'] ) : '';
+	$apikey = isset( $instance['apikey'] ) ? esc_attr( $instance['apikey'] ) : '';
+	$description = isset( $instance['description'] ) ? esc_attr( $instance['description'] ) : '';
 	
 	echo $before_widget;
 	
