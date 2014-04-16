@@ -3,8 +3,8 @@ Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: google maps, maps, mobile, image
 Requires at least: 3.6
-Tested up to: 3.9-alpha
-Stable tag: 2013.12.25
+Tested up to: 3.9
+Stable tag: 2014.04.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,10 +51,6 @@ Thanks for your understanding and cooperation.
 
 = Wordpress =
 
-Quick installation: [Install now](http://coveredwebservices.com/wp-plugin-install/?plugin=so-mobile-map-widget) !
-
- &hellip; OR &hellip;
-
 Search for "so mobile map widget" and install with the **Plugins > Add New** back-end page.
 
  &hellip; OR &hellip;
@@ -65,7 +61,7 @@ Follow these steps:
 
  2. Upload the zip file via the Plugins > Add New > Upload page &hellip; OR &hellip; unpack and upload with your favourite FTP client to the /plugins/ folder.
 
- 3. Activate the plugin on the Plug-ins page.
+ 3. Activate the plugin on the Plugins page.
 
 Done!
 
@@ -109,6 +105,10 @@ Background image of banner-772x250.png used as banner image on WordPress Plugin 
 6. Choosing a different route on Satelite view
 
 == Changelog ==
+
+= 2014.04.16 =
+
+* Made sure that Widget Preview (WP 3.9 feature) works for the plugin
 
 = 2013.12.25 =
 
