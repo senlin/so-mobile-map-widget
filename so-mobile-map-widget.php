@@ -2,7 +2,7 @@
 Plugin Name: SO Mobile Map Widget
 Plugin URI: http://so-wp.com/?p=16
 Description: This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional. 
-Version: 2014.04.16
+Version: 2014.04.27
 Author: Piet Bos
 Author URI: http://senlinonline.com
 Text Domain: so-mobile-map-widget
@@ -26,7 +26,7 @@ if ( ! empty ( $GLOBALS['pagenow'] ) && 'plugins.php' === $GLOBALS['pagenow'] )
 
 function so_mmw_min_wp_version() {
 	global $wp_version;
-	$require_wp = '3.6';
+	$require_wp = '3.7';
 	$update_url = get_admin_url( null, 'update-core.php' );
 
 	$errors = array();
@@ -60,7 +60,7 @@ function so_mmw_check_admin_notices()
 
 /** add plugin textdomain */
 function so_mmw_init() {
-	load_plugin_textdomain( 'so_mmw', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+	load_plugin_textdomain( 'so-mobile-map-widget', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 add_action( 'plugins_loaded', 'so_mmw_init' );
 
@@ -93,7 +93,7 @@ class SO_MobileMapWidget extends WP_Widget {
 	}
 	
 	echo '<div class="so_mmw_widget_content">';
-		echo '<a href="http://maps.google.com/maps?daddr=' . $daddr . '&amp;markers=color:' . $color . '%7C' . $daddr . '&amp;sensor=true" target="_blank"><img src="http://maps.googleapis.com/maps/api/staticmap?center=' . $daddr . '&amp;zoom=' . $zoom . '&amp;size=' . $width . 'x' . $height . '&amp;scale=2&amp;markers=color:' . $color . '%7C' . $daddr . '&amp;sensor=true&amp;visual_refresh=true';
+		echo '<a href="http://maps.google.com/maps?daddr=' . $daddr . '&amp;markers=color:' . $color . '%7C' . $daddr . '&amp;sensor=true" target="_blank"><img src="http://maps.googleapis.com/maps/api/staticmap?center=' . $daddr . '&amp;zoom=' . $zoom . '&amp;size=' . $width . 'x' . $height . '&amp;format=jpg&amp;scale=2&amp;markers=color:' . $color . '%7C' . $daddr . '&amp;sensor=true&amp;visual_refresh=true';
 		if( $apikey != '' )
 			echo '&amp;key=' . $apikey;
 		echo '" width="' . $width . '" height="' . $height . '" alt="" /></a>';
@@ -151,15 +151,15 @@ class SO_MobileMapWidget extends WP_Widget {
         </p>
         <p>
             <label for="<?php echo $this->get_field_id( 'zoom' ); ?>"><?php _e( 'Zoom level, from 0 (world view) to 21 (streetview); from 15 and up seems to be good for locations in larger cities, but best to check and play around with it a bit.', 'so-mobile-map-widget' ); ?></label>
-            <input type="text" name="<?php echo $this->get_field_name( 'zoom' ); ?>" value="<?php echo $instance['zoom']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'zoom' ); ?>" />
+            <input type="number" name="<?php echo $this->get_field_name( 'zoom' ); ?>" value="<?php echo $instance['zoom']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'zoom' ); ?>" />
         </p>
         <p>
             <label for="<?php echo $this->get_field_id( 'width' ); ?>"><?php _e( 'Width in px:', 'so-mobile-map-widget' ); ?></label>
-            <input type="text" name="<?php echo $this->get_field_name( 'width' ); ?>" value="<?php echo $instance['width']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'width' ); ?>" />
+            <input type="number" name="<?php echo $this->get_field_name( 'width' ); ?>" value="<?php echo $instance['width']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'width' ); ?>" />
         </p>
         <p>
             <label for="<?php echo $this->get_field_id( 'height' ); ?>"><?php _e( 'Height in px:', 'so-mobile-map-widget' ); ?></label>
-            <input type="text" name="<?php echo $this->get_field_name( 'height' ); ?>" value="<?php echo $instance['height']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'height' ); ?>" />
+            <input type="number" name="<?php echo $this->get_field_name( 'height' ); ?>" value="<?php echo $instance['height']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'height' ); ?>" />
         </p>
         <p>
             <label for="<?php echo $this->get_field_id( 'apikey' ); ?>"><?php _e( 'Google Static Maps API Key (optional):', 'so-mobile-map-widget' ); ?></label>

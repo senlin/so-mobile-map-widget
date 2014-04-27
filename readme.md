@@ -1,7 +1,7 @@
 # SO Mobile Map Widget
 
-###### Version 2014.04.16
-###### requires at least WordPress 3.6
+###### Version 2014.04.27
+###### requires at least WordPress 3.7
 ###### tested up to 3.9
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
@@ -48,6 +48,8 @@ You can adjust all the necessary settings in the widget itself.
 
 A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions; the link opens in a new tab, if I get complaints about that I will make it optional; sensor is set to true as we're dealing with mobile devices here.
 
+Please note that the zoom, width and height parameters take a <strong>numerical</strong> value only.
+
 ### After adding the widget, why does it show some place in China?
 
 Since 2013.12.25 I have added some default values to the widget to get rid of an `undefined index` error. As I have been living in Beijing, China for the past 15 years and I love hiking the wild Great Wall, I thought it most appropriate to add one of my favourite spots as a default setting. Just use the coordinates that you need to replace the default ones. The same goes for the other default values of the widget.
@@ -80,6 +82,13 @@ See above.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2014.04.27
+
+* Change input type to number for zoom, width and height to address [issue #2](https://github.com/senlin/so-mobile-map-widget/issues/2) and adjust FAQ
+* Add `format=jpg` to map parameters to allow for the smallest size and progressive loading of the image
+* Fix typo textdomain function
+* Move minimum required WP version up to 3.7
 
 ### 2014.04.16
 
