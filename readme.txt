@@ -2,9 +2,9 @@
 Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: google maps, maps, mobile, image
-Requires at least: 3.6
-Tested up to: 3.9-alpha
-Stable tag: 2013.12.25
+Requires at least: 3.7
+Tested up to: 3.9
+Stable tag: 2014.04.27
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,10 +51,6 @@ Thanks for your understanding and cooperation.
 
 = Wordpress =
 
-Quick installation: [Install now](http://coveredwebservices.com/wp-plugin-install/?plugin=so-mobile-map-widget) !
-
- &hellip; OR &hellip;
-
 Search for "so mobile map widget" and install with the **Plugins > Add New** back-end page.
 
  &hellip; OR &hellip;
@@ -65,7 +61,7 @@ Follow these steps:
 
  2. Upload the zip file via the Plugins > Add New > Upload page &hellip; OR &hellip; unpack and upload with your favourite FTP client to the /plugins/ folder.
 
- 3. Activate the plugin on the Plug-ins page.
+ 3. Activate the plugin on the Plugins page.
 
 Done!
 
@@ -78,6 +74,8 @@ You can stop looking, there is none.
 You can adjust all the ncessary settings in the widget itself. 
 
 A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions; the link opens in a new tab, if I get complaints about that I will make it optional; sensor is set to true as we're dealing with mobile devices here.
+
+Please note that the zoom, width and height parameters take a <strong>numerical</strong> value only.
 
 = After adding the widget, why does it show some place in China? =
 
@@ -110,7 +108,18 @@ Background image of banner-772x250.png used as banner image on WordPress Plugin 
 
 == Changelog ==
 
-= 2013.12.23 =
+= 2014.04.27 =
+
+* Change input type to number for zoom, width and height to address [issue #2](https://github.com/senlin/so-mobile-map-widget/issues/2) and adjust FAQ
+* Add `format=jpg` to map parameters to allow for the smallest size and progressive loading of the image
+* Fix typo textdomain function
+* Move minimum required WP version up to 3.7
+
+= 2014.04.16 =
+
+* Made sure that Widget Preview (WP 3.9 feature) works for the plugin
+
+= 2013.12.25 =
 
 * Tested up to WP 3.9-alpha
 * Change format version numbers
