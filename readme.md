@@ -1,8 +1,8 @@
 # SO Mobile Map Widget
 
-###### Version 2014.04.27
-###### requires at least WordPress 3.7
-###### tested up to 3.9
+###### Version 2014.07.30
+###### requires at least WordPress 3.8
+###### tested up to 4.0-beta-2
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
 ###### [Plugin homepage](http://so-wp.com/plugin/so-mobile-map-widget)
@@ -21,7 +21,7 @@ Once activated you can go to your Widgets (under Appearance in your backend) and
 
  1. Title (optional).
  
- 2. Destination coordinates. The help text contains a link to [Google Maps API Example: Simple Geocoding](http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html) where you can fill in an address to easily find the coordinates of your destination. The map will also be automatically centered on this location.
+ 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. I have kept the link to [Google Maps API Example: Simple Geocoding](http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html) if only so you can check whether the output of your address is correct and/or to tweak the exact location. The map will also be automatically centered on this location.
  
  3. Color of the pin. You can choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.
  
@@ -46,7 +46,7 @@ You can of course also visit your site from a desktop or laptop computer, but as
 You can stop looking, there is none. 
 You can adjust all the necessary settings in the widget itself. 
 
-A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions; the link opens in a new tab, if I get complaints about that I will make it optional; sensor is set to true as we're dealing with mobile devices here.
+A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions and the link opens in a new tab; if I get complaints about the latter I will make it optional.
 
 Please note that the zoom, width and height parameters take a <strong>numerical</strong> value only.
 
@@ -69,7 +69,7 @@ See above.
 
 ## Donations
 
-* Donate link: http://so-wp.com/donations
+* Donate link: http://so-wp.com/donations/
 
 ## Connect with me through
 
@@ -82,6 +82,14 @@ See above.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2014.07.30
+
+* The location field now also takes an address (credits Google Maps Widget - http://www.googlemapswidget.com/)
+* Add transient (credits Google Maps Widget - http://www.googlemapswidget.com/)
+* Adjust FAQ
+* Tested up to WP 4.0-beta2
+* Bump minimum required WP version up to 3.8
 
 ### 2014.04.27
 

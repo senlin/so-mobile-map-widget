@@ -2,7 +2,7 @@
 Plugin Name: SO Mobile Map Widget
 Plugin URI: http://so-wp.com/?p=16
 Description: This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional. 
-Version: 2014.04.27
+Version: 2014.07.30
 Author: Piet Bos
 Author URI: http://senlinonline.com
 Text Domain: so-mobile-map-widget
@@ -13,7 +13,7 @@ Domain Path: /languages
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
- * Version check; any WP version under 3.6 is not supported (if only to "force" users to stay up to date)
+ * Version check; any WP version under $require_wp is not supported (if only to "force" users to stay up to date)
  * 
  * adapted from example by Thomas Scholz (@toscho) http://wordpress.stackexchange.com/a/95183/2015, Version: 2013.03.31, Licence: MIT (http://opensource.org/licenses/MIT)
  *
@@ -26,7 +26,7 @@ if ( ! empty ( $GLOBALS['pagenow'] ) && 'plugins.php' === $GLOBALS['pagenow'] )
 
 function so_mmw_min_wp_version() {
 	global $wp_version;
-	$require_wp = '3.7';
+	$require_wp = '3.8';
 	$update_url = get_admin_url( null, 'update-core.php' );
 
 	$errors = array();
@@ -64,6 +64,7 @@ function so_mmw_init() {
 }
 add_action( 'plugins_loaded', 'so_mmw_init' );
 
+
 class SO_MobileMapWidget extends WP_Widget {
 
 /** constructor */
@@ -71,14 +72,61 @@ class SO_MobileMapWidget extends WP_Widget {
 		$widget_ops = array( 'description' => __( 'This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.', 'so-mobile-map-widget' ) );
 		parent::WP_Widget( false, __( 'SO Mobile Map Widget', 'so-mobile-map-widget' ), $widget_ops );      
 	}
+
+	/**
+	 * fetch coordinates based on the address and add transient
+	 * snippet copied from Google Maps Widget - http://www.googlemapswidget.com/
+	 *
+	 * since 2014.07.30
+	 */
+	static function get_coordinates( $address, $force_refresh = false ) {
+	$address_hash = md5( 'SO_MobileMapWidget' . $address );
+	
+	if ( $force_refresh || ( $coordinates = get_transient( $address_hash ) ) === false ) {
+	  $url = 'http://maps.googleapis.com/maps/api/geocode/xml?address=' . urlencode( $address );
+	  $result = wp_remote_get( $url );
+	
+	  if ( ! is_wp_error( $result ) && $result['response']['code'] == 200) {
+	    $data = new SimpleXMLElement( $result['body'] );
+	    
+	    if ( $data->status == 'OK' ) {
+	      $cache_value['lat']     = (string) $data->result->geometry->location->lat;
+	      $cache_value['lng']     = (string) $data->result->geometry->location->lng;
+	      $cache_value['address'] = (string) $data->result->formatted_address;
+	
+	      // cache coordinates for 3 months
+	      set_transient( $address_hash, $cache_value, 3600*24*30*3 );
+	      $data = $cache_value;
+	    } elseif ( ! $data->status ) {
+	      return false;
+	    } else {
+	      return false;
+	    }
+	  } else {
+	     return false;
+	  }
+	} else {
+	   // data is cached, get it
+	   $data = get_transient( $address_hash );
+	}
+	
+	return $data;
+	} // get_coordinates
 	
 	/** @see WP_Widget::widget */
 	function widget( $args, $instance ) {
 		extract( $args );
+	
+	$address = '';
+	$coordinates = SO_MobileMapWidget::get_coordinates( $instance['address'] );
+	if ( $coordinates ) {
+		$address = $coordinates['lat'] . ',' . $coordinates['lng'];
+	}
+	
 		
 	// these are our widget options
 	$title = apply_filters( 'widget_title', $instance['title'] );
-	$daddr = isset( $instance['daddr'] ) ? esc_attr( $instance['daddr'] ) : '';
+	$address = isset( $instance['address'] ) ? esc_attr( $instance['address'] ) : '';
 	$color = isset( $instance['color'] ) ? esc_attr( $instance['color'] ) : '';
 	$zoom = isset( $instance['zoom'] ) ? esc_attr( $instance['zoom'] ) : '';
 	$width = isset( $instance['width'] ) ? esc_attr( $instance['width'] ) : '';
@@ -92,8 +140,9 @@ class SO_MobileMapWidget extends WP_Widget {
 		echo $before_title . $title . $after_title;
 	}
 	
+	// 2014.07.30 sensor parameter no longer needed: developers.google.com/maps/documentation/staticmaps/#Moreinfo
 	echo '<div class="so_mmw_widget_content">';
-		echo '<a href="http://maps.google.com/maps?daddr=' . $daddr . '&amp;markers=color:' . $color . '%7C' . $daddr . '&amp;sensor=true" target="_blank"><img src="http://maps.googleapis.com/maps/api/staticmap?center=' . $daddr . '&amp;zoom=' . $zoom . '&amp;size=' . $width . 'x' . $height . '&amp;format=jpg&amp;scale=2&amp;markers=color:' . $color . '%7C' . $daddr . '&amp;sensor=true&amp;visual_refresh=true';
+		echo '<a href="http://maps.google.com/maps?daddr=' . urlencode($instance['address']) . '&amp;markers=color:' . $color . '%7C' . urlencode($instance['address']) . '" target="_blank"><img src="http://maps.googleapis.com/maps/api/staticmap?center=' . urlencode($instance['address']) . '&amp;zoom=' . $zoom . '&amp;size=' . $width . 'x' . $height . '&amp;format=jpg&amp;scale=2&amp;markers=color:' . $color . '%7C' . urlencode($instance['address']);
 		if( $apikey != '' )
 			echo '&amp;key=' . $apikey;
 		echo '" width="' . $width . '" height="' . $height . '" alt="" /></a>';
@@ -110,7 +159,7 @@ class SO_MobileMapWidget extends WP_Widget {
     function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		$instance['title'] = strip_tags( $new_instance['title'] );
-		$instance['daddr'] = strip_tags( $new_instance['daddr'] );
+		$instance['address'] = strip_tags( $new_instance['address'] );
 		$instance['color'] = strip_tags( $new_instance['color'] );
 		$instance['zoom'] = strip_tags( $new_instance['zoom'] );
 		$instance['width'] = strip_tags( $new_instance['width'] );
@@ -126,12 +175,12 @@ class SO_MobileMapWidget extends WP_Widget {
 		/* Set up some default widget settings. */
 		$defaults = array( 
 			'title' => 'Title (optional)', 
-			'daddr' => '40.430214,116.56564', // wild Great Wall at backside of Mutianyu (Lianhuachi, Huairou, Beijing, China) 
+			'address' => 'Lianhuachi, Huairou, Beijing, China',  // wild Great Wall at backside of Mutianyu (Lianhuachi, Huairou, Beijing, China)
 			'color' => 'blue', 
 			'zoom' => 12, 
 			'width' => 250, 
 			'height' => 250, 
-			'apikey' => '', 
+			'apikey' => '',
 			'description' => 'Description (optional)'
 		);
 		$instance = wp_parse_args( (array) $instance, $defaults );
@@ -142,9 +191,8 @@ class SO_MobileMapWidget extends WP_Widget {
             <input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" class="widefat" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'daddr' ); ?>"><?php _e( 'Destination, map will also be centered on this point; check your coordinates via <a href="http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html" target="_blank">this site</a>.', 'so-mobile-map-widget' ); ?></label>
-            <input type="text" name="<?php echo $this->get_field_name( 'daddr' ); ?>" value="<?php echo $instance['daddr']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'daddr' ); ?>" />
-        </p>
+        	<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Fill in the address of the location you want to show on the map; also takes coordinates, which you can check <a href="http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html" target="_blank">here</a>.', 'so-mobile-map-widget' ); ?></label>
+        	<input class="widefat" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" type="text" value="<?php echo esc_attr( $instance['address'] ); ?>" /></p>
         <p>
             <label for="<?php echo $this->get_field_id( 'color' ); ?>"><?php _e( 'Color, choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.', 'so-mobile-map-widget' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'color' ); ?>" value="<?php echo $instance['color']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'color' ); ?>" />
@@ -169,12 +217,16 @@ class SO_MobileMapWidget extends WP_Widget {
             <label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Description shows under map image (optional):', 'so-mobile-map-widget' ); ?></label>
             <input type="textarea" name="<?php echo $this->get_field_name( 'description' ); ?>" value="<?php echo $instance['description']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" />
         </p>
-	
+        	
+        <p><i><?php printf( __( 'If you like the SO Mobile Map Widget, please consider leaving a <a href="%1$s">review</a> or making a <a href="%2$s">donation</a>. Thanks!', 'so-mobile-map-widget'), 'http://wordpress.org/support/view/plugin-reviews/so-mobile-map-widget#postform', 'http://so-wp.com/donations/' ); ?></i></p>
+
 	<?php }
+
 }
+
 
 // Register widget
 add_action(
 	'widgets_init',
-	create_function('','return register_widget("SO_MobileMapWidget");')
+	create_function( '', 'return register_widget("SO_MobileMapWidget");' )
 );
