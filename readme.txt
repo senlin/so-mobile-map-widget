@@ -2,9 +2,9 @@
 Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: google maps, maps, mobile, image
-Requires at least: 3.7
-Tested up to: 3.9
-Stable tag: 2014.04.27
+Requires at least: 3.8
+Tested up to: 4.0-beta-2
+Stable tag: 2014.07.30
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ Once activated you can go to your Widgets (under Appearance in your backend) and
 
  1. Title (optional).
  
- 2. Destination coordinates. The help text contains a link to [Google Maps API Example: Simple Geocoding](http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html) where you can fill in an address to easily find the coordinates of your destination. The map will also be automatically centered on this location.
+ 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. I have kept the link to [Google Maps API Example: Simple Geocoding](http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html) if only so you can check whether the output of your address is correct and/or to tweak the exact location. The map will also be automatically centered on this location.
  
  3. Color of the pin. You can choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.
  
@@ -45,6 +45,8 @@ I have decided to only support this plugin through [Github](https://github.com/s
 **PLEASE DO NOT POST YOUR ISSUES VIA THE WORDPRESS FORUMS**
 
 Thanks for your understanding and cooperation.
+
+If you like the SO Mobile Map Widget, please consider leaving a [review](http://wordpress.org/support/view/plugin-reviews/so-mobile-map-widget#postform) or making a [donation](http://so-wp.com/donations/). Thanks!
 
 
 == Installation ==
@@ -71,15 +73,15 @@ Done!
 = Where is the settings page? =
 
 You can stop looking, there is none. 
-You can adjust all the ncessary settings in the widget itself. 
+You can adjust all the necessary settings in the widget itself. 
 
-A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions; the link opens in a new tab, if I get complaints about that I will make it optional; sensor is set to true as we're dealing with mobile devices here.
+A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions and the link opens in a new tab; if I get complaints about the latter I will make it optional.
 
 Please note that the zoom, width and height parameters take a <strong>numerical</strong> value only.
 
 = After adding the widget, why does it show some place in China? =
 
-Since 2013.12.25 I have added some default values to the widget to get rid of an `undefined index` error. As I have been living in Beijing, China for the past 15 years and I love hiking the wild Great Wall, I thought it most appropriate to add one of my favourite spots as a default setting. Just use the coordinates that you need to replace the default ones. The same goes for the other default values of the widget.
+Since 2013.12.25 I have added some default values to the widget. As I have been living in Beijing, China for the past 16 years and I love hiking the wild Great Wall, I thought it most appropriate to add one of my favourite spots as a default setting. Just replace the default setting with the address (or the coordinates) of the location you wish to add. The same goes for the other default values of the widget.
 
 = Do I need a Google Static Maps API-key? =
 
@@ -107,6 +109,14 @@ Background image of banner-772x250.png used as banner image on WordPress Plugin 
 6. Choosing a different route on Satelite view
 
 == Changelog ==
+
+= 2014.07.30 =
+
+* The location field now also takes an address (credits Google Maps Widget - http://www.googlemapswidget.com/)
+* Add transient (credits Google Maps Widget - http://www.googlemapswidget.com/)
+* Adjust FAQ
+* Tested up to WP 4.0-beta2
+* Bump minimum required WP version up to 3.8
 
 = 2014.04.27 =
 
@@ -156,6 +166,10 @@ Background image of banner-772x250.png used as banner image on WordPress Plugin 
 * Release version
 
 == Upgrade Notice ==
+
+= 2014.07.30 =
+
+* The widget now also takes an address (instead of previously only coordinates)!
 
 = 0.4 =
 
