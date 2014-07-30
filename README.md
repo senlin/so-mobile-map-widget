@@ -52,7 +52,7 @@ Please note that the zoom, width and height parameters take a <strong>numerical<
 
 ### After adding the widget, why does it show some place in China?
 
-Since 2013.12.25 I have added some default values to the widget to get rid of an `undefined index` error. As I have been living in Beijing, China for the past 15 years and I love hiking the wild Great Wall, I thought it most appropriate to add one of my favourite spots as a default setting. Just use the coordinates that you need to replace the default ones. The same goes for the other default values of the widget.
+Since 2013.12.25 I have added some default values to the widget. As I have been living in Beijing, China for the past 16 years and I love hiking the wild Great Wall, I thought it most appropriate to add one of my favourite spots as a default setting. Just replace the default setting with the address (or the coordinates) of the location you wish to add. The same goes for the other default values of the widget.
 
 ### Do I need a Google Static Maps API-key?
 
