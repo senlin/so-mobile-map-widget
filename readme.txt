@@ -2,9 +2,9 @@
 Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: google maps, maps, mobile, image
-Requires at least: 3.8
-Tested up to: 4.0-beta-2
-Stable tag: 2014.07.30
+Requires at least: 4.0
+Tested up to: 4.2
+Stable tag: 2015.04.09
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,7 +32,7 @@ Once activated you can go to your Widgets (under Appearance in your backend) and
  
  6. Height in pixels.
  
- 7. Google Static Maps API Key (optional). You can use the instructions in the above linked Developer Guide to activate the Static Maps API and create your key.
+ 7. Google Static Maps API Key (REQUIRED). Since version 2014.12.26 the API key is required. Please find [here](https://developers.google.com/maps/documentation/staticmaps/#api_key) the instructions on generating the key.
  
  8. Description (optional). You can use this field to add a description under the map image, for example to inform your visitors that the image is clickable.
  
@@ -46,7 +46,7 @@ I have decided to only support this plugin through [Github](https://github.com/s
 
 Thanks for your understanding and cooperation.
 
-If you like the SO Mobile Map Widget, please consider leaving a [review](http://wordpress.org/support/view/plugin-reviews/so-mobile-map-widget#postform) or making a [donation](http://so-wp.com/donations/). Thanks!
+If you like the SO Mobile Map Widget, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-mobile-map-widget#postform) or making a [donation](http://so-wp.com/donations/). Thanks!
 
 
 == Installation ==
@@ -109,6 +109,11 @@ Background image of banner-772x250.png used as banner image on WordPress Plugin 
 6. Choosing a different route on Satelite view
 
 == Changelog ==
+
+= 2015.04.09 =
+
+* changed logos
+* new banner image for WP.org Repo by [Sylwia Bartyzel](https://unsplash.com/sylwiabartyzel)
 
 = 2014.07.30 =
 

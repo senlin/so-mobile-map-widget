@@ -1,8 +1,8 @@
 # SO Mobile Map Widget
 
-###### Version 2014.07.30
-###### requires at least WordPress 3.8
-###### tested up to 4.0-beta-2
+###### Version 2015.04.09
+###### requires at least WordPress 4.0
+###### tested up to 4.2
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
 ###### [Plugin homepage](http://so-wp.com/plugin/so-mobile-map-widget)
@@ -75,13 +75,16 @@ See above.
 
 [Github](https://github.com/senlin) 
 
-[Google+](http://plus.google.com/+PietBos) 
-
 [WordPress](http://profiles.wordpress.org/senlin/) 
 
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2015.04.09
+
+* changed logos
+* new banner image for WP.org Repo by [Sylwia Bartyzel](https://unsplash.com/sylwiabartyzel)
 
 ### 2014.07.30
 

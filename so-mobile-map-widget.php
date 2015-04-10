@@ -2,7 +2,7 @@
 Plugin Name: SO Mobile Map Widget
 Plugin URI: http://so-wp.com/?p=16
 Description: This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional. 
-Version: 2014.07.30
+Version: 2015.04.09
 Author: Piet Bos
 Author URI: http://senlinonline.com
 Text Domain: so-mobile-map-widget
@@ -26,7 +26,7 @@ if ( ! empty ( $GLOBALS['pagenow'] ) && 'plugins.php' === $GLOBALS['pagenow'] )
 
 function so_mmw_min_wp_version() {
 	global $wp_version;
-	$require_wp = '3.8';
+	$require_wp = '4.0';
 	$update_url = get_admin_url( null, 'update-core.php' );
 
 	$errors = array();
@@ -142,8 +142,8 @@ class SO_MobileMapWidget extends WP_Widget {
 	
 	// 2014.07.30 sensor parameter no longer needed: developers.google.com/maps/documentation/staticmaps/#Moreinfo
 	echo '<div class="so_mmw_widget_content">';
-		echo '<a href="http://maps.google.com/maps?daddr=' . urlencode($instance['address']) . '&amp;markers=color:' . $color . '%7C' . urlencode($instance['address']) . '" target="_blank"><img src="http://maps.googleapis.com/maps/api/staticmap?center=' . urlencode($instance['address']) . '&amp;zoom=' . $zoom . '&amp;size=' . $width . 'x' . $height . '&amp;format=jpg&amp;scale=2&amp;markers=color:' . $color . '%7C' . urlencode($instance['address']);
-		if( $apikey != '' )
+		echo '<a href="http://maps.google.com/maps?daddr=' . urlencode( $instance['address'] ) . '&amp;markers=color:' . $color . '%7C' . urlencode( $instance['address'] ) . '" target="_blank"><img src="http://maps.googleapis.com/maps/api/staticmap?center=' . urlencode($instance['address']) . '&amp;zoom=' . $zoom . '&amp;size=' . $width . 'x' . $height . '&amp;format=jpg&amp;scale=2&amp;markers=color:' . $color . '%7C' . urlencode( $instance['address'] );
+		if( $apikey && $apikey != '' )
 			echo '&amp;key=' . $apikey;
 		echo '" width="' . $width . '" height="' . $height . '" alt="" /></a>';
 		if ( $description != '' ) {
@@ -191,7 +191,7 @@ class SO_MobileMapWidget extends WP_Widget {
             <input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" class="widefat" />
         </p>
         <p>
-        	<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Fill in the address of the location you want to show on the map; also takes coordinates, which you can check <a href="http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html" target="_blank">here</a>.', 'so-mobile-map-widget' ); ?></label>
+        	<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Fill in the exact address of the location you want to show on the map; also takes coordinates, which you can check <a href="http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html" target="_blank"></a>.', 'so-mobile-map-widget' ); ?></label>
         	<input class="widefat" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" type="text" value="<?php echo esc_attr( $instance['address'] ); ?>" /></p>
         <p>
             <label for="<?php echo $this->get_field_id( 'color' ); ?>"><?php _e( 'Color, choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.', 'so-mobile-map-widget' ); ?></label>
@@ -210,7 +210,7 @@ class SO_MobileMapWidget extends WP_Widget {
             <input type="number" name="<?php echo $this->get_field_name( 'height' ); ?>" value="<?php echo $instance['height']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'height' ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'apikey' ); ?>"><?php _e( 'Google Static Maps API Key (optional):', 'so-mobile-map-widget' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'apikey' ); ?>"><?php _e( 'Google Static Maps API Key (<strong>REQUIRED</strong>, follow <a href="https://developers.google.com/maps/documentation/staticmaps/#api_key" target="_blank">these instructions</a>):', 'so-mobile-map-widget' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'apikey' ); ?>" value="<?php echo $instance['apikey']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'apikey' ); ?>" />
         </p>
         <p>
@@ -218,7 +218,7 @@ class SO_MobileMapWidget extends WP_Widget {
             <input type="textarea" name="<?php echo $this->get_field_name( 'description' ); ?>" value="<?php echo $instance['description']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" />
         </p>
         	
-        <p><i><?php printf( __( 'If you like the SO Mobile Map Widget, please consider leaving a <a href="%1$s">review</a> or making a <a href="%2$s">donation</a>. Thanks!', 'so-mobile-map-widget'), 'http://wordpress.org/support/view/plugin-reviews/so-mobile-map-widget#postform', 'http://so-wp.com/donations/' ); ?></i></p>
+        <p><i><?php printf( __( 'If you like the SO Mobile Map Widget, please consider leaving a <a href="%1$s">review</a> or making a <a href="%2$s">donation</a>. Thanks!', 'so-mobile-map-widget'), 'https://wordpress.org/support/view/plugin-reviews/so-mobile-map-widget#postform', 'http://so-wp.com/donations/' ); ?></i></p>
 
 	<?php }
 
