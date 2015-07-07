@@ -2,7 +2,7 @@
 Plugin Name: SO Mobile Map Widget
 Plugin URI: http://so-wp.com/?p=16
 Description: This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional. 
-Version: 2015.04.09
+Version: 2015.7.7
 Author: Piet Bos
 Author URI: http://senlinonline.com
 Text Domain: so-mobile-map-widget
@@ -67,11 +67,17 @@ add_action( 'plugins_loaded', 'so_mmw_init' );
 
 class SO_MobileMapWidget extends WP_Widget {
 
-/** constructor */
-	function SO_MobileMapWidget() {
-		$widget_ops = array( 'description' => __( 'This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.', 'so-mobile-map-widget' ) );
-		parent::WP_Widget( false, __( 'SO Mobile Map Widget', 'so-mobile-map-widget' ), $widget_ops );      
-	}
+/**
+ * constructor
+ * @modified 2015.07.07 parent::WP_Widget() deprecated since WP 4.3 - more info: https://gist.github.com/chriscct7/d7d077afb01011b1839d
+ */
+    function __construct() {
+        $widget_ops = array( 'description' => __( 'This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.', 'so-mobile-map-widget' ) );
+        parent::__construct( false, __( 'SO Mobile Map Widget', 'so-mobile-map-widget' ), $widget_ops );
+    }
+
+
+
 
 	/**
 	 * fetch coordinates based on the address and add transient

@@ -1,8 +1,8 @@
 # SO Mobile Map Widget
 
-###### Version 2015.04.09
+###### Version 2015.7.7
 ###### requires at least WordPress 4.0
-###### tested up to 4.2
+###### tested up to 4.3-beta1
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
 ###### [Plugin homepage](http://so-wp.com/plugin/so-mobile-map-widget)
@@ -80,6 +80,11 @@ See above.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2015.7.7
+
+* July 7, 2015
+* in WP 4.3 PHP 4 style constructors are deprecated, the plugin contained such a constructor, therefore replaced with PHP 5 style constructor
 
 ### 2015.04.09
 
