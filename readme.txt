@@ -3,7 +3,7 @@ Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: google maps, maps, mobile, image
 Requires at least: 4.0
-Tested up to: 4.3-beta1
+Tested up to: 4.3
 Stable tag: 2015.7.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
