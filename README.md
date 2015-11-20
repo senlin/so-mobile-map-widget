@@ -1,8 +1,10 @@
 # SO Mobile Map Widget
 
+[![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget)
+
 ###### Version 2015.7.7
 ###### requires at least WordPress 4.0
-###### tested up to 4.3
+###### tested up to 4.4
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
 ###### [Plugin homepage](http://so-wp.com/plugin/so-mobile-map-widget)
