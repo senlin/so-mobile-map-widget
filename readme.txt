@@ -51,7 +51,7 @@ If you like the SO Mobile Map Widget, please consider leaving a [review](https:/
 
 == Installation ==
 
-= Wordpress =
+= WordPress =
 
 Search for "so mobile map widget" and install with the **Plugins > Add New** back-end page.
 
