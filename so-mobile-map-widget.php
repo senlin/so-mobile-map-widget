@@ -26,7 +26,7 @@ if ( ! empty ( $GLOBALS['pagenow'] ) && 'plugins.php' === $GLOBALS['pagenow'] )
 
 function so_mmw_min_wp_version() {
 	global $wp_version;
-	$require_wp = '4.0';
+	$require_wp = '4.2';
 	$update_url = get_admin_url( null, 'update-core.php' );
 
 	$errors = array();
@@ -69,10 +69,16 @@ class SO_MobileMapWidget extends WP_Widget {
 
 /**
  * constructor
- * @modified 2015.07.07 parent::WP_Widget() deprecated since WP 4.3 - more info: https://gist.github.com/chriscct7/d7d077afb01011b1839d
+ * @modified 2015.7.7 parent::WP_Widget() deprecated since WP 4.3 - more info: https://gist.github.com/chriscct7/d7d077afb01011b1839d
+ * @modified 2016.3.31 implement selective refresh support for Customizer (WP 4.5 feature) - more info: https://make.wordpress.org/core/2016/03/22/implementing-selective-refresh-support-for-widgets/ 
  */
     function __construct() {
-        $widget_ops = array( 'description' => __( 'This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.', 'so-mobile-map-widget' ) );
+        $widget_ops = array(
+        	'description' => __( 'This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.', 'so-mobile-map-widget' ),
+        	// since 2016.3.31
+        	'customize_selective_refresh' => true
+        );
+        
         parent::__construct( false, __( 'SO Mobile Map Widget', 'so-mobile-map-widget' ), $widget_ops );
     }
 

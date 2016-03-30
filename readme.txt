@@ -2,9 +2,9 @@
 Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: google maps, maps, mobile, image
-Requires at least: 4.0
-Tested up to: 4.4
-Stable tag: 2015.7.7
+Requires at least: 4.2
+Tested up to: 4.5
+Stable tag: 2016.3.31
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,11 +85,15 @@ Since 2013.12.25 I have added some default values to the widget. As I have been 
 
 = Do I need a Google Static Maps API-key? =
 
-The Google Static Maps API-key is optional, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get they API-key.
+The Google Static Maps API-key is mandatory, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get they API-key.
 
 = Where can I sign up for the Google Static Maps API-key? =
 
 See above.
+
+= When I use the Customizer to add the SO Mobile Map Widget I am seeing a lot of PHP Notices. What's wrong? =
+
+The notices only show if you have not yet added the Google Static Maps API Key. You will need to [generate a new API key](https://developers.google.com/maps/documentation/staticmaps/#api_key) and add it to the widget settings. Once you have the widget will automatically auto-refresh (WP 4.5 and above) and you will now see a map instead of the PHP Notices.
 
 = I have an issue with this plugin, where can I get support? =
 
@@ -105,6 +109,13 @@ Please open an issue on [Github](https://github.com/senlin/so-mobile-map-widget/
 6. Choosing a different route on Satelite view
 
 == Changelog ==
+
+= 2016.3.31 =
+
+* March 31, 2016
+* implement selective refresh support for Customizer (WP 4.5 feature)
+* adjust FAQ
+* bump minimum required WP version up to 4.2
 
 = 2015.7.7 =
 

@@ -2,9 +2,9 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget)
 
-###### Version 2015.7.7
-###### requires at least WordPress 4.0
-###### tested up to 4.4
+###### Version 2016.3.31
+###### requires at least WordPress 4.2
+###### tested up to 4.5
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
 ###### [Plugin homepage](http://so-wp.com/plugin/so-mobile-map-widget)
@@ -33,7 +33,7 @@ Once activated you can go to your Widgets (under Appearance in your backend) and
  
  6. Height in pixels.
  
- 7. Google Static Maps API Key (optional). You can use the instructions in the above linked Developer Guide to activate the Static Maps API and create your key.
+ 7. Google Static Maps API Key (REQUIRED). You can use the instructions in the above linked Developer Guide to activate the Static Maps API and create your key.
  
  8. Description (optional). You can use this field to add a description under the map image, for example to inform your visitors that the image is clickable.
  
@@ -58,11 +58,15 @@ Since 2013.12.25 I have added some default values to the widget. As I have been 
 
 ### Do I need a Google Static Maps API-key?
 
-The Google Static Maps API-key is optional, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get the API-key.
+The Google Static Maps API-key is mandatory, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get the API-key.
 
 ### Where can I sign up for the Google Static Maps API-key?
 
 See above.
+
+### When I use the Customizer to add the SO Mobile Map Widget I am seeing a lot of PHP Notices. What's wrong?
+
+The notices only show if you have not yet added the Google Static Maps API Key. You will need to [generate a new API key](https://developers.google.com/maps/documentation/staticmaps/#api_key) and add it to the widget settings. Once you have the widget will automatically auto-refresh (WP 4.5 and above) and you will now see a map instead of the PHP Notices.
 
 ## License
 
@@ -82,6 +86,13 @@ See above.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2016.3.31
+
+* March 31, 2016
+* implement selective refresh support for Customizer (WP 4.5 feature)
+* adjust FAQ
+* bump minimum required WP version up to 4.2
 
 ### 2015.7.7
 
