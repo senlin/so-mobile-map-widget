@@ -64,9 +64,9 @@ The Google Static Maps API-key is mandatory, read the [Google documentation](htt
 
 See above.
 
-### When I use the Customizer to add the SO Mobile Map Widget I am seeing a lot of PHP Notices. What's wrong?
+### When I use the Customizer to add the SO Mobile Map Widget I am seeing a lot of PHP Notices or nothing at all. What's wrong?
 
-The notices only show if you have not yet added the Google Static Maps API Key. You will need to [generate a new API key](https://developers.google.com/maps/documentation/staticmaps/#api_key) and add it to the widget settings. Once you have the widget will automatically auto-refresh (WP 4.5 and above) and you will now see a map instead of the PHP Notices.
+This only happens if you have not yet added the Google Static Maps API Key. You will need to [generate a new API key](https://developers.google.com/maps/documentation/staticmaps/#api_key) and add it to the widget settings. Once you have, the widget will automatically auto-refresh (WP 4.5 and above) and you will now see a map instead.
 
 ## License
 
