@@ -1,10 +1,10 @@
 <?php /*
 Plugin Name: SO Mobile Map Widget
-Plugin URI: http://so-wp.com/?p=16
+Plugin URI: https://so-wp.com/?p=16
 Description: This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional. 
-Version: 2015.7.7
-Author: Piet Bos
-Author URI: http://senlinonline.com
+Version: 2016.3.31
+Author: SO WP
+Author URI: https://so-wp.com/plugins/
 Text Domain: so-mobile-map-widget
 Domain Path: /languages
 */
@@ -230,7 +230,7 @@ class SO_MobileMapWidget extends WP_Widget {
             <input type="textarea" name="<?php echo $this->get_field_name( 'description' ); ?>" value="<?php echo $instance['description']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" />
         </p>
         	
-        <p><i><?php printf( __( 'If you like the SO Mobile Map Widget, please consider leaving a <a href="%1$s">review</a> or making a <a href="%2$s">donation</a>. Thanks!', 'so-mobile-map-widget'), 'https://wordpress.org/support/view/plugin-reviews/so-mobile-map-widget#postform', 'http://so-wp.com/donations/' ); ?></i></p>
+        <p><i><?php printf( __( 'If you like the SO Mobile Map Widget, please consider leaving a <a href="%1$s">review</a> or making a <a href="%2$s">donation</a>. Thanks!', 'so-mobile-map-widget'), 'https://wordpress.org/support/view/plugin-reviews/so-mobile-map-widget#postform', 'https://so-wp.com/donations/' ); ?></i></p>
 
 	<?php }
 
