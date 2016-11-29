@@ -1,8 +1,8 @@
 <?php /*
 Plugin Name: SO Mobile Map Widget
 Plugin URI: https://so-wp.com/?p=16
-Description: This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional. 
-Version: 2016.3.31
+Description: This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is mandatory. 
+Version: 2016.11.29
 Author: SO WP
 Author URI: https://so-wp.com/plugins/
 Text Domain: so-mobile-map-widget
@@ -11,52 +11,6 @@ Domain Path: /languages
 
 /** Prevent direct access to files */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
-/**
- * Version check; any WP version under $require_wp is not supported (if only to "force" users to stay up to date)
- * 
- * adapted from example by Thomas Scholz (@toscho) http://wordpress.stackexchange.com/a/95183/2015, Version: 2013.03.31, Licence: MIT (http://opensource.org/licenses/MIT)
- *
- * @since 0.4
- */
-
-//Only do this when on the Plugins page.
-if ( ! empty ( $GLOBALS['pagenow'] ) && 'plugins.php' === $GLOBALS['pagenow'] )
-	add_action( 'admin_notices', 'so_mmw_check_admin_notices', 0 );
-
-function so_mmw_min_wp_version() {
-	global $wp_version;
-	$require_wp = '4.2';
-	$update_url = get_admin_url( null, 'update-core.php' );
-
-	$errors = array();
-
-	if ( version_compare( $wp_version, $require_wp, '<' ) ) 
-
-		$errors[] = "You have WordPress version $wp_version installed, but <b>this plugin requires at least WordPress $require_wp</b>. Please <a href='$update_url'>update your WordPress version</a>.";
-
-	return $errors; 
-}
-
-function so_mmw_check_admin_notices()
-{
-	$errors = so_mmw_min_wp_version();
-
-	if ( empty ( $errors ) )
-		return;
-
-	// Suppress "Plugin activated" notice.
-	unset( $_GET['activate'] );
-
-	// this plugin's name
-	$name = get_file_data( __FILE__, array ( 'Plugin Name' ), 'plugin' );
-
-	printf( __( '<div class="error"><p>%1$s</p><p><i>%2$s</i> has been deactivated.</p></div>', 'so-mobile-map-widget' ),
-		join( '</p><p>', $errors ),
-		$name[0]
-	);
-	deactivate_plugins( plugin_basename( __FILE__ ) );
-}
 
 /** add plugin textdomain */
 function so_mmw_init() {
@@ -203,7 +157,7 @@ class SO_MobileMapWidget extends WP_Widget {
             <input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" class="widefat" />
         </p>
         <p>
-        	<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Fill in the exact address of the location you want to show on the map; also takes coordinates, which you can check <a href="http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html" target="_blank"></a>.', 'so-mobile-map-widget' ); ?></label>
+        	<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Fill in the exact address of the location you want to show on the map; also takes coordinates, which you can check <a href="http://googlemaps.github.io/js-v2-samples/geocoder/singlegeocode.html" target="_blank">here</a>.', 'so-mobile-map-widget' ); ?></label>
         	<input class="widefat" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" type="text" value="<?php echo esc_attr( $instance['address'] ); ?>" /></p>
         <p>
             <label for="<?php echo $this->get_field_id( 'color' ); ?>"><?php _e( 'Color, choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.', 'so-mobile-map-widget' ); ?></label>
@@ -222,7 +176,7 @@ class SO_MobileMapWidget extends WP_Widget {
             <input type="number" name="<?php echo $this->get_field_name( 'height' ); ?>" value="<?php echo $instance['height']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'height' ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'apikey' ); ?>"><?php _e( 'Google Static Maps API Key (<strong>REQUIRED</strong>, follow <a href="https://developers.google.com/maps/documentation/staticmaps/#api_key" target="_blank">these instructions</a>):', 'so-mobile-map-widget' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'apikey' ); ?>"><?php _e( 'Google Static Maps API Key (<strong>REQUIRED</strong>, get it <a href="https://developers.google.com/maps/documentation/staticmaps/#api_key" target="_blank">here</a>):', 'so-mobile-map-widget' ); ?></label>
             <input type="text" name="<?php echo $this->get_field_name( 'apikey' ); ?>" value="<?php echo $instance['apikey']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'apikey' ); ?>" />
         </p>
         <p>

@@ -1,10 +1,10 @@
 === SO Mobile Map Widget ===
 Contributors: senlin
-Donate link: http://so-wp.com/donations
+Donate link: http://so-wp.com/plugins/donations
 Tags: google maps, maps, mobile, image
 Requires at least: 4.2
-Tested up to: 4.5
-Stable tag: 2016.3.31
+Tested up to: 4.7
+Stable tag: 2016.11.29
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ Once activated you can go to your Widgets (under Appearance in your backend) and
 
  1. Title (optional).
  
- 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. I have kept the link to [Google Maps API Example: Simple Geocoding](http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html) if only so you can check whether the output of your address is correct and/or to tweak the exact location. The map will also be automatically centered on this location.
+ 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. I have kept the link to [Google Maps API Example: Simple Geocoding](http://googlemaps.github.io/js-v2-samples/geocoder/singlegeocode.html) if only so you can check whether the output of your address is correct and/or to tweak the exact location. The map will also be automatically centered on this location.
  
  3. Color of the pin. You can choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.
  
@@ -32,7 +32,7 @@ Once activated you can go to your Widgets (under Appearance in your backend) and
  
  6. Height in pixels.
  
- 7. Google Static Maps API Key (REQUIRED). Since version 2014.12.26 the API key is required. Please find [here](https://developers.google.com/maps/documentation/staticmaps/#api_key) the instructions on generating the key.
+ 7. Google Static Maps API Key (REQUIRED). You can use the instructions in the above linked Developer Guide to activate the Static Maps API and create your key.
  
  8. Description (optional). You can use this field to add a description under the map image, for example to inform your visitors that the image is clickable.
  
@@ -81,11 +81,11 @@ Please note that the zoom, width and height parameters take a <strong>numerical<
 
 = After adding the widget, why does it show some place in China? =
 
-Since 2013.12.25 I have added some default values to the widget. As I have been living in Beijing, China for the past 16 years and I love hiking the wild Great Wall, I thought it most appropriate to add one of my favourite spots as a default setting. Just replace the default setting with the address (or the coordinates) of the location you wish to add. The same goes for the other default values of the widget.
+Since 2013.12.25 I have added some default values to the widget. During the 15 years I lived in Beijing, China, I always loved hiking the wild Great Wall. I thought it a fun idea to add one of my favourite spots as a default setting. Just replace the default setting with the address (or the coordinates) of the location you wish to add. The same goes for the other default values of the widget.
 
 = Do I need a Google Static Maps API-key? =
 
-The Google Static Maps API-key is mandatory, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get they API-key.
+The Google Static Maps API-key is mandatory, get it at [Google Map APIs](https://developers.google.com/maps/documentation/staticmaps/#api_key).
 
 = Where can I sign up for the Google Static Maps API-key? =
 
@@ -106,9 +106,17 @@ Please open an issue on [Github](https://github.com/senlin/so-mobile-map-widget/
 3. Manually enter your Current Location (for example if you don't have your GPS turned on)
 4. Choose the most suitable route and via which mode of transport (where available)
 5. The start of the route including directions at the bottom of the screen
-6. Choosing a different route on Satelite view
+6. Choosing a different route on Satellite view
 
 == Changelog ==
+
+= 2016.11.29 =
+
+* November 29, 2016
+* fix typo in settings that link to help map to get coordinates
+* update URL to help map
+* remove version check
+* tested up to WP 4.7
 
 = 2016.3.31 =
 

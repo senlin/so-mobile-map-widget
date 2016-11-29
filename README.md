@@ -2,12 +2,12 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget)
 
-###### Version 2016.3.31
+###### Version 2016.11.29
 ###### requires at least WordPress 4.2
-###### tested up to 4.5
+###### tested up to 4.7
 ###### Author: [Piet Bos](https://github.com/senlin)
-###### [Stable Version](http://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
-###### [Plugin homepage](http://so-wp.com/plugin/so-mobile-map-widget)
+###### [Stable Version](https://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
+###### [Plugin homepage](https://so-wp.com/plugin/so-mobile-map-widget)
 
 This WordPress widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.
 
@@ -23,7 +23,7 @@ Once activated you can go to your Widgets (under Appearance in your backend) and
 
  1. Title (optional).
  
- 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. I have kept the link to [Google Maps API Example: Simple Geocoding](http://gmaps-samples.googlecode.com/svn/trunk/geocoder/singlegeocode.html) if only so you can check whether the output of your address is correct and/or to tweak the exact location. The map will also be automatically centered on this location.
+ 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. I have kept the link to [Google Maps API Example: Simple Geocoding](http://googlemaps.github.io/js-v2-samples/geocoder/singlegeocode.html) if only so you can check whether the output of your address is correct and/or to tweak the exact location. The map will also be automatically centered on this location.
  
  3. Color of the pin. You can choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.
  
@@ -54,11 +54,11 @@ Please note that the zoom, width and height parameters take a <strong>numerical<
 
 ### After adding the widget, why does it show some place in China?
 
-Since 2013.12.25 I have added some default values to the widget. As I have been living in Beijing, China for the past 16 years and I love hiking the wild Great Wall, I thought it most appropriate to add one of my favourite spots as a default setting. Just replace the default setting with the address (or the coordinates) of the location you wish to add. The same goes for the other default values of the widget.
+Since 2013.12.25 I have added some default values to the widget. During the 15 years I lived in Beijing, China, I always loved hiking the wild Great Wall. I thought it a fun idea to add one of my favourite spots as a default setting. Just replace the default setting with the address (or the coordinates) of the location you wish to add. The same goes for the other default values of the widget.
 
 ### Do I need a Google Static Maps API-key?
 
-The Google Static Maps API-key is mandatory, read the [Google documentation](https://developers.google.com/maps/documentation/staticmaps/#api_key) for more details including information on how to get the API-key.
+The Google Static Maps API-key is mandatory, get it at [Google Map APIs](https://developers.google.com/maps/documentation/staticmaps/#api_key).
 
 ### Where can I sign up for the Google Static Maps API-key?
 
@@ -75,17 +75,30 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 
 ## Donations
 
-* Donate link: http://so-wp.com/donations/
+* Donate link: http://so-wp.com/plugins/donations
 
 ## Connect with me through
 
+[Website](https://bohanintl.com)
+
+[Website](https://so-wp.com)
+
 [Github](https://github.com/senlin) 
 
-[WordPress](http://profiles.wordpress.org/senlin/) 
+[LinkedIn](https://www.linkedin.com/in/pietbos) 
 
-[Website](http://senlinonline.com)
+[WordPress](https://profiles.wordpress.org/senlin/) 
 
 ## Changelog
+
+### 2016.11.29
+
+* November 29, 2016
+* fix typo in settings that link to help map to get coordinates
+* update URL to help map
+* remove version check
+* tested up to WP 4.7
+
 
 ### 2016.3.31
 
