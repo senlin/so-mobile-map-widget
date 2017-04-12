@@ -2,7 +2,7 @@
 Plugin Name: SO Mobile Map Widget
 Plugin URI: https://so-wp.com/?p=16
 Description: This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is mandatory. 
-Version: 2016.11.29
+Version: 2017.4.12
 Author: SO WP
 Author URI: https://so-wp.com/plugins/
 Text Domain: so-mobile-map-widget
@@ -41,7 +41,7 @@ class SO_MobileMapWidget extends WP_Widget {
 
 	/**
 	 * fetch coordinates based on the address and add transient
-	 * snippet copied from Google Maps Widget - http://www.googlemapswidget.com/
+	 * snippet copied from Google Maps Widget - https://www.googlemapswidget.com/
 	 *
 	 * since 2014.07.30
 	 */
@@ -49,7 +49,7 @@ class SO_MobileMapWidget extends WP_Widget {
 	$address_hash = md5( 'SO_MobileMapWidget' . $address );
 	
 	if ( $force_refresh || ( $coordinates = get_transient( $address_hash ) ) === false ) {
-	  $url = 'http://maps.googleapis.com/maps/api/geocode/xml?address=' . urlencode( $address );
+	  $url = 'https://maps.googleapis.com/maps/api/geocode/xml?address=' . urlencode( $address );
 	  $result = wp_remote_get( $url );
 	
 	  if ( ! is_wp_error( $result ) && $result['response']['code'] == 200) {
@@ -108,7 +108,7 @@ class SO_MobileMapWidget extends WP_Widget {
 	
 	// 2014.07.30 sensor parameter no longer needed: developers.google.com/maps/documentation/staticmaps/#Moreinfo
 	echo '<div class="so_mmw_widget_content">';
-		echo '<a href="http://maps.google.com/maps?daddr=' . urlencode( $instance['address'] ) . '&amp;markers=color:' . $color . '%7C' . urlencode( $instance['address'] ) . '" target="_blank"><img src="http://maps.googleapis.com/maps/api/staticmap?center=' . urlencode($instance['address']) . '&amp;zoom=' . $zoom . '&amp;size=' . $width . 'x' . $height . '&amp;format=jpg&amp;scale=2&amp;markers=color:' . $color . '%7C' . urlencode( $instance['address'] );
+		echo '<a href="https://maps.google.com/maps?daddr=' . urlencode( $instance['address'] ) . '&amp;markers=color:' . $color . '%7C' . urlencode( $instance['address'] ) . '" target="_blank"><img src="https://maps.googleapis.com/maps/api/staticmap?center=' . urlencode($instance['address']) . '&amp;zoom=' . $zoom . '&amp;size=' . $width . 'x' . $height . '&amp;format=jpg&amp;scale=2&amp;markers=color:' . $color . '%7C' . urlencode( $instance['address'] );
 		if( $apikey && $apikey != '' )
 			echo '&amp;key=' . $apikey;
 		echo '" width="' . $width . '" height="' . $height . '" alt="" /></a>';
@@ -157,7 +157,7 @@ class SO_MobileMapWidget extends WP_Widget {
             <input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" class="widefat" />
         </p>
         <p>
-        	<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Fill in the exact address of the location you want to show on the map; also takes coordinates, which you can check <a href="http://googlemaps.github.io/js-v2-samples/geocoder/singlegeocode.html" target="_blank">here</a>.', 'so-mobile-map-widget' ); ?></label>
+        	<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Fill in the exact address of the location you want to show on the map; also takes coordinates, which you can check <a href="https://googlemaps.github.io/js-v2-samples/geocoder/singlegeocode.html" target="_blank">here</a>.', 'so-mobile-map-widget' ); ?></label>
         	<input class="widefat" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" type="text" value="<?php echo esc_attr( $instance['address'] ); ?>" /></p>
         <p>
             <label for="<?php echo $this->get_field_id( 'color' ); ?>"><?php _e( 'Color, choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.', 'so-mobile-map-widget' ); ?></label>

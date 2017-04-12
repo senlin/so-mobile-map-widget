@@ -1,10 +1,10 @@
 === SO Mobile Map Widget ===
 Contributors: senlin
-Donate link: http://so-wp.com/plugins/donations
+Donate link: https://so-wp.com/plugins/donations
 Tags: google maps, maps, mobile, image
-Requires at least: 4.2
+Requires at least: 4.4
 Tested up to: 4.7
-Stable tag: 2016.11.29
+Stable tag: 2017.4.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ Once activated you can go to your Widgets (under Appearance in your backend) and
 
  1. Title (optional).
  
- 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. I have kept the link to [Google Maps API Example: Simple Geocoding](http://googlemaps.github.io/js-v2-samples/geocoder/singlegeocode.html) if only so you can check whether the output of your address is correct and/or to tweak the exact location. The map will also be automatically centered on this location.
+ 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. I have kept the link to [Google Maps API Example: Simple Geocoding](https://googlemaps.github.io/js-v2-samples/geocoder/singlegeocode.html) if only so you can check whether the output of your address is correct and/or to tweak the exact location. The map will also be automatically centered on this location.
  
  3. Color of the pin. You can choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.
  
@@ -46,7 +46,7 @@ I have decided to only support this plugin through [Github](https://github.com/s
 
 Thanks for your understanding and cooperation.
 
-If you like the SO Mobile Map Widget, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-mobile-map-widget#postform) or making a [donation](http://so-wp.com/donations/). Thanks!
+If you like the SO Mobile Map Widget, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-mobile-map-widget#postform) or making a [donation](https://so-wp.com/donations/). Thanks!
 
 
 == Installation ==
@@ -110,6 +110,11 @@ Please open an issue on [Github](https://github.com/senlin/so-mobile-map-widget/
 
 == Changelog ==
 
+= 2017.4.12 =
+
+* April 12, 2017
+* change http links to https, props [@senatorman](https://wordpress.org/support/users/senatorman/)
+
 = 2016.11.29 =
 
 * November 29, 2016
@@ -137,8 +142,8 @@ Please open an issue on [Github](https://github.com/senlin/so-mobile-map-widget/
 
 = 2014.07.30 =
 
-* The location field now also takes an address (credits Google Maps Widget - http://www.googlemapswidget.com/)
-* Add transient (credits Google Maps Widget - http://www.googlemapswidget.com/)
+* The location field now also takes an address (credits Google Maps Widget - https://www.googlemapswidget.com/)
+* Add transient (credits Google Maps Widget - https://www.googlemapswidget.com/)
 * Adjust FAQ
 * Tested up to WP 4.0-beta2
 * Bump minimum required WP version up to 3.8

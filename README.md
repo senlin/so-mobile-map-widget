@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget)
 
-###### Version 2016.11.29
-###### requires at least WordPress 4.2
+###### Version 2017.4.12
+###### requires at least WordPress 4.4
 ###### tested up to 4.7
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](https://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
@@ -23,7 +23,7 @@ Once activated you can go to your Widgets (under Appearance in your backend) and
 
  1. Title (optional).
  
- 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. I have kept the link to [Google Maps API Example: Simple Geocoding](http://googlemaps.github.io/js-v2-samples/geocoder/singlegeocode.html) if only so you can check whether the output of your address is correct and/or to tweak the exact location. The map will also be automatically centered on this location.
+ 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. I have kept the link to [Google Maps API Example: Simple Geocoding](https://googlemaps.github.io/js-v2-samples/geocoder/singlegeocode.html) if only so you can check whether the output of your address is correct and/or to tweak the exact location. The map will also be automatically centered on this location.
  
  3. Color of the pin. You can choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.
  
@@ -75,13 +75,13 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 
 ## Donations
 
-* Donate link: http://so-wp.com/plugins/donations
+* Donate link: https://so-wp.com/plugins/donations
 
 ## Connect with me through
 
-[Website](https://bohanintl.com)
+[BHI Consulting](https://bohanintl.com)
 
-[Website](https://so-wp.com)
+[SO WP](https://so-wp.com)
 
 [Github](https://github.com/senlin) 
 
@@ -90,6 +90,11 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 [WordPress](https://profiles.wordpress.org/senlin/) 
 
 ## Changelog
+
+### 2017.4.12
+
+* April 12, 2017
+* change http links to https, props [@senatorman](https://wordpress.org/support/users/senatorman/)
 
 ### 2016.11.29
 
@@ -119,8 +124,8 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 
 ### 2014.07.30
 
-* The location field now also takes an address (credits Google Maps Widget - http://www.googlemapswidget.com/)
-* Add transient (credits Google Maps Widget - http://www.googlemapswidget.com/)
+* The location field now also takes an address (credits Google Maps Widget - https://www.googlemapswidget.com/)
+* Add transient (credits Google Maps Widget - https://www.googlemapswidget.com/)
 * Adjust FAQ
 * Tested up to WP 4.0-beta2
 * Bump minimum required WP version up to 3.8
