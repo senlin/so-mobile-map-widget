@@ -2,9 +2,9 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget)
 
-###### Version 2017.4.12
+###### Version 2017.6.1
 ###### requires at least WordPress 4.4
-###### tested up to 4.7
+###### tested up to 4.8
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](https://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
 ###### [Plugin homepage](https://so-wp.com/plugin/so-mobile-map-widget)
@@ -48,13 +48,13 @@ You can of course also visit your site from a desktop or laptop computer, but as
 You can stop looking, there is none. 
 You can adjust all the necessary settings in the widget itself. 
 
-A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions and the link opens in a new tab; if I get complaints about the latter I will make it optional.
+A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions and the link opens in a new tab.
 
 Please note that the zoom, width and height parameters take a <strong>numerical</strong> value only.
 
-### After adding the widget, why does it show some place in China?
+### After adding the widget, why does it show some place in the middle of the North Atlantic Ocean?
 
-Since 2013.12.25 I have added some default values to the widget. During the 15 years I lived in Beijing, China, I always loved hiking the wild Great Wall. I thought it a fun idea to add one of my favourite spots as a default setting. Just replace the default setting with the address (or the coordinates) of the location you wish to add. The same goes for the other default values of the widget.
+The widget takes default settings, so what better location to choose than the very spot we operate from? Just replace the default setting with the address (or the coordinates) of the location you wish to add. The same goes for the other default values of the widget.
 
 ### Do I need a Google Static Maps API-key?
 
@@ -79,7 +79,7 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 
 ## Connect with me through
 
-[BHI Consulting](https://bohanintl.com)
+[BHI Consulting for Websites](https://bohanintl.com)
 
 [SO WP](https://so-wp.com)
 
@@ -90,6 +90,14 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 [WordPress](https://profiles.wordpress.org/senlin/) 
 
 ## Changelog
+
+### 2017.6.1
+
+* June 1, 2017
+* change default location and pin color
+* clean up tabs and spaces
+* remove redundant language files
+* verified compatibility WP 4.8
 
 ### 2017.4.12
 

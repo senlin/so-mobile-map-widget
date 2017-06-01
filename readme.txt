@@ -3,8 +3,8 @@ Contributors: senlin
 Donate link: https://so-wp.com/plugins/donations
 Tags: google maps, maps, mobile, image
 Requires at least: 4.4
-Tested up to: 4.7
-Stable tag: 2017.4.12
+Tested up to: 4.8
+Stable tag: 2017.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,7 +46,7 @@ I have decided to only support this plugin through [Github](https://github.com/s
 
 Thanks for your understanding and cooperation.
 
-If you like the SO Mobile Map Widget, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-mobile-map-widget#postform) or making a [donation](https://so-wp.com/donations/). Thanks!
+If you like the SO Mobile Map Widget, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/so-mobile-map-widget#postform) or making a [donation](https://so-wp.com/plugins/donations/). Thanks!
 
 
 == Installation ==
@@ -79,9 +79,9 @@ A few settings are done by default: the scale of the image is set to 2, to optim
 
 Please note that the zoom, width and height parameters take a <strong>numerical</strong> value only.
 
-= After adding the widget, why does it show some place in China? =
+= After adding the widget, why does it show some place in the middle of the North Atlantic Ocean? =
 
-Since 2013.12.25 I have added some default values to the widget. During the 15 years I lived in Beijing, China, I always loved hiking the wild Great Wall. I thought it a fun idea to add one of my favourite spots as a default setting. Just replace the default setting with the address (or the coordinates) of the location you wish to add. The same goes for the other default values of the widget.
+The widget takes default settings, so what better location to choose than the very spot we operate from? Just replace the default setting with the address (or the coordinates) of the location you wish to add. The same goes for the other default values of the widget.
 
 = Do I need a Google Static Maps API-key? =
 
@@ -109,6 +109,14 @@ Please open an issue on [Github](https://github.com/senlin/so-mobile-map-widget/
 6. Choosing a different route on Satellite view
 
 == Changelog ==
+
+= 2017.6.1 =
+
+* June 1, 2017
+* change default location and pin color
+* clean up tabs and spaces
+* remove redundant language files
+* verified compatibility WP 4.8
 
 = 2017.4.12 =
 
