@@ -1,33 +1,33 @@
-# SO Mobile Map Widget
+# Mobile Map Widget
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget)
 
-###### Version 2017.6.1
+###### Version 2017.105
 ###### requires at least WordPress 4.4
-###### tested up to 4.8
+###### tested up to 4.8.2
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](https://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
-###### [Plugin homepage](https://so-wp.com/plugin/so-mobile-map-widget)
+###### [Plugin homepage](https://so-wp.com/plugin/mobile-map-widget)
 
 This WordPress widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.
 
 ## Description
 
-SO Mobile Map Widget is meant for websites that target browsing via mobile devices. This widget adds a mobile-optimised Static Google Map Image with a colored pin centered on your destination. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional.
+Mobile Map Widget is meant for websites that target browsing via mobile devices. This widget adds a mobile-optimised Static Google Map Image with a colored pin centered on your destination. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional.
 
-The reason I developed the SO Mobile Map Widget as a plugin, is because while implementing the widget for a mobile framework I am building for the hospitality industry, I realised that this widget can come in handy for many other scenarios too. You can include it on your company website to help people find your office location from wherever in the city they are. A travel information site can use it to include maps of tourist attractions, bars and restaurants can use it, you can use it to direct people to your new home, it can even come in handy for if you organise a party with a location that is kept secret till the very last moment!
+The reason we developed the Mobile Map Widget as a plugin, is because while implementing the widget for a mobile framework we were building for the hospitality industry, we realised that this widget can come in handy for many other scenarios too. It can for example be added to a company website to help people find the office location from wherever in the city they are. A travel information site can use it to include maps of tourist attractions, bars and restaurants can use it, you can use it to direct people to your new home, it can even come in handy for if you organise a party with a location that is kept secret till the very last moment!
 
-I used the [Static Maps API V2 Developer Guide](https://developers.google.com/maps/documentation/staticmaps/) to build the URLs needed to show the Static Map Image as well as the proper link. 
+We used the [Static Maps API V2 Developer Guide](https://developers.google.com/maps/documentation/staticmaps/) to build the URLs needed to show the Static Map Image as well as the proper link. 
 
-Once activated you can go to your Widgets (under Appearance in your backend) and drag the SO Mobile Map Widget to the sidebar of your choice. When you have placed the widget in a sidebar you need to fill in the following data:
+Once activated you can go to your Widgets (in the backend under Appearance or via the Customizer) and drag the Mobile Map Widget to the sidebar of your choice. When you have placed the widget in a sidebar you need to fill in the following data:
 
  1. Title (optional).
  
- 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. I have kept the link to [Google Maps API Example: Simple Geocoding](https://googlemaps.github.io/js-v2-samples/geocoder/singlegeocode.html) if only so you can check whether the output of your address is correct and/or to tweak the exact location. The map will also be automatically centered on this location.
+ 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. The map will also be automatically centered on this location.
  
  3. Color of the pin. You can choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.
  
- 4. Zoom level. From 0 (world view) to 21+ (streetview); from 15 and up seems to be good for locations in larger cities, but best to check and play around with it a bit.
+ 4. Zoom level. From 0 (world view) to 21+ (street view); from 15 and up seems to be good for locations in larger cities, but best to check and play around with it a bit.
  
  5. Width in pixels. The image width will be automatically scaled to optimise for mobile screens.
  
@@ -40,6 +40,12 @@ Once activated you can go to your Widgets (under Appearance in your backend) and
 Now you can save the widget and visit your website from a mobile device. When you click on the Static Map Image you will be directed to a Google Maps website that looks the same in almost all mobile browsers. If the site doesn't automatically fill in your Current Location (it helps if you have your GPS turned on), you can always type it in. Then it will give you the different possible routes on how to get to the destination, by different modes of transport where available. Once you are looking at the map, you can also choose between the different available Map Layers. 
 
 You can of course also visit your site from a desktop or laptop computer, but as those devices do not have a GPS locator, they won't automatically fill in your Current Location.
+
+We support this plugin here on Github. Therefore, if you have any questions, need help and/or want to make a feature request, please [open an issue](https://github.com/senlin/so-mobile-map-widget/issues) here.
+
+If you like the Mobile Map Widget plugin, please consider leaving a [review](https://wordpress.org/support/plugin/so-mobile-map-widget/reviews/?rate=5#new-post) or making a [donation](https://so-wp.com/donations/). Thanks!
+
+[Mobile Map Widget](https://so-wp.com/plugin/mobile-map-widget) plugin by SO WP.
 
 ## Frequently Asked Questions
 
@@ -64,7 +70,7 @@ The Google Static Maps API-key is mandatory, get it at [Google Map APIs](https:/
 
 See above.
 
-### When I use the Customizer to add the SO Mobile Map Widget I am seeing a lot of PHP Notices or nothing at all. What's wrong?
+### When I use the Customizer to add the Mobile Map Widget I am seeing a lot of PHP Notices or nothing at all. What's wrong?
 
 This only happens if you have not yet added the Google Static Maps API Key. You will need to [generate a new API key](https://developers.google.com/maps/documentation/staticmaps/#api_key) and add it to the widget settings. Once you have, the widget will automatically auto-refresh (WP 4.5 and above) and you will now see a map instead.
 
@@ -75,13 +81,15 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 
 ## Donations
 
-* Donate link: https://so-wp.com/plugins/donations
+* Donate link: https://so-wp.com/donations
 
 ## Connect with me through
 
-[BHI Consulting for Websites](https://bohanintl.com)
+[BHI Consulting for Websites](https://bohanintl.com/)
 
 [SO WP](https://so-wp.com)
+
+[WP Tips](https://bohanintl.com/wptips/)
 
 [Github](https://github.com/senlin) 
 
@@ -90,6 +98,14 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 [WordPress](https://profiles.wordpress.org/senlin/) 
 
 ## Changelog
+
+### 2017.105
+
+* October 5, 2017
+* remove link to find coordinates as it no longer works
+* change some links due to renewal SO WP website
+* clean up irrelevant screenshots
+
 
 ### 2017.6.1
 

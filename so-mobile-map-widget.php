@@ -1,10 +1,10 @@
 <?php /*
-Plugin Name: SO Mobile Map Widget
-Plugin URI: https://so-wp.com/?p=16
-Description: This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is mandatory. 
-Version: 2017.6.1
+Plugin Name: Mobile Map Widget
+Plugin URI: https://so-wp.com/plugin/mobile-map-widget
+Description: This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is mandatory.
+Version: 2017.105
 Author: SO WP
-Author URI: https://so-wp.com/plugins/
+Author URI: https://so-wp.com
 Text Domain: so-mobile-map-widget
 Domain Path: /languages
 */
@@ -26,7 +26,7 @@ class SO_MobileMapWidget extends WP_Widget {
  * more info: https://gist.github.com/chriscct7/d7d077afb01011b1839d
  *
  * @modified 2016.3.31 implement selective refresh support for Customizer (WP 4.5 feature)
- * more info: https://make.wordpress.org/core/2016/03/22/implementing-selective-refresh-support-for-widgets/ 
+ * more info: https://make.wordpress.org/core/2016/03/22/implementing-selective-refresh-support-for-widgets/
  */
 	function __construct() {
 		$widget_ops = array(
@@ -35,7 +35,7 @@ class SO_MobileMapWidget extends WP_Widget {
 			'customize_selective_refresh' => true
 		);
 
-		parent::__construct( false, __( 'SO Mobile Map Widget', 'so-mobile-map-widget' ), $widget_ops );
+		parent::__construct( false, __( 'Mobile Map Widget', 'so-mobile-map-widget' ), $widget_ops );
 	}
 
 	/**
@@ -136,16 +136,16 @@ class SO_MobileMapWidget extends WP_Widget {
     }
 
     /** @see WP_Widget::form */
-	function form( $instance ) {        
+	function form( $instance ) {
 
 		/* Set up some default widget settings. */
-		$defaults = array( 
-			'title' => 'Title (optional)', 
+		$defaults = array(
+			'title' => 'Title (optional)',
 			'address' => 'Flamengos, Horta, Faial, Açores, Portugal',
-			'color' => 'orange', 
-			'zoom' => 2, 
-			'width' => 250, 
-			'height' => 250, 
+			'color' => 'orange',
+			'zoom' => 2,
+			'width' => 250,
+			'height' => 250,
 			'apikey' => '',
 			'description' => 'Description (optional)'
 		);
@@ -157,7 +157,7 @@ class SO_MobileMapWidget extends WP_Widget {
 		<input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" class="widefat" />
 	</p>
 	<p>
-		<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Fill in the exact address of the location you want to show on the map; also takes coordinates, which you can check <a href="https://googlemaps.github.io/js-v2-samples/geocoder/singlegeocode.html" target="_blank">here</a>.', 'so-mobile-map-widget' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Fill in the exact address of the location you want to show on the map; also takes coordinates.', 'so-mobile-map-widget' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" type="text" value="<?php echo esc_attr( $instance['address'] ); ?>" /></p>
 	<p>
 		<label for="<?php echo $this->get_field_id( 'color' ); ?>"><?php _e( 'Color, choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.', 'so-mobile-map-widget' ); ?></label>
@@ -184,7 +184,7 @@ class SO_MobileMapWidget extends WP_Widget {
 		<input type="textarea" name="<?php echo $this->get_field_name( 'description' ); ?>" value="<?php echo $instance['description']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" />
 	</p>
 	<p>
-		<i><?php printf( __( 'If you like the SO Mobile Map Widget, please consider leaving a <a href="%1$s">review</a> or making a <a href="%2$s">donation</a>. Thanks!', 'so-mobile-map-widget'), 'https://wordpress.org/support/plugin/so-mobile-map-widget/reviews/?rate=5#new-post', 'https://so-wp.com/plugins/donations/' ); ?></i>
+		<i><?php printf( __( 'If you like the Mobile Map Widget, please consider leaving a <a href="%1$s">review</a> or making a <a href="%2$s">donation</a>. Thanks!', 'so-mobile-map-widget'), 'https://wordpress.org/support/plugin/so-mobile-map-widget/reviews/?rate=5#new-post', 'https://so-wp.com/donations' ); ?></i>
 	</p>
 
 	<?php }
