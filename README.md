@@ -2,28 +2,26 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget)
 
-###### Version 2017.105
+###### Version 2018.814
 ###### requires at least WordPress 4.4
-###### tested up to 4.8.2
-###### Author: [Piet Bos](https://github.com/senlin)
-###### [Stable Version](https://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Repository
+###### tested up to 4.9.8
+###### Author: [Pieter Bos](https://github.com/senlin)
+###### [Stable Version](https://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Directory
 ###### [Plugin homepage](https://so-wp.com/plugin/mobile-map-widget)
 
 This WordPress widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.
 
 ## Description
 
-Mobile Map Widget is meant for websites that target browsing via mobile devices. This widget adds a mobile-optimised Static Google Map Image with a colored pin centered on your destination. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is optional.
+Mobile Map Widget is meant for websites that target browsing via mobile devices. This widget adds a mobile-optimised Static Google Maps Image with a colored pin centered on your destination. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is required.
 
 The reason we developed the Mobile Map Widget as a plugin, is because while implementing the widget for a mobile framework we were building for the hospitality industry, we realised that this widget can come in handy for many other scenarios too. It can for example be added to a company website to help people find the office location from wherever in the city they are. A travel information site can use it to include maps of tourist attractions, bars and restaurants can use it, you can use it to direct people to your new home, it can even come in handy for if you organise a party with a location that is kept secret till the very last moment!
-
-We used the [Static Maps API V2 Developer Guide](https://developers.google.com/maps/documentation/staticmaps/) to build the URLs needed to show the Static Map Image as well as the proper link. 
 
 Once activated you can go to your Widgets (in the backend under Appearance or via the Customizer) and drag the Mobile Map Widget to the sidebar of your choice. When you have placed the widget in a sidebar you need to fill in the following data:
 
  1. Title (optional).
  
- 2. Destination. Since 2014.07.30 you can add an address or use the coordinates. The map will also be automatically centered on this location.
+ 2. Destination. Use an address or use the coordinates. The map will also be automatically centered on this location.
  
  3. Color of the pin. You can choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.
  
@@ -33,17 +31,15 @@ Once activated you can go to your Widgets (in the backend under Appearance or vi
  
  6. Height in pixels.
  
- 7. Google Static Maps API Key (REQUIRED). You can use the instructions in the above linked Developer Guide to activate the Static Maps API and create your key.
+ 7. [Google Static Maps API Key](https://cloud.google.com/maps-platform/#get-started) (**REQUIRED**). **Since July 16, 2018 a valid credit card is required by Google to sign up for the API-key**
  
  8. Description (optional). You can use this field to add a description under the map image, for example to inform your visitors that the image is clickable.
  
-Now you can save the widget and visit your website from a mobile device. When you click on the Static Map Image you will be directed to a Google Maps website that looks the same in almost all mobile browsers. If the site doesn't automatically fill in your Current Location (it helps if you have your GPS turned on), you can always type it in. Then it will give you the different possible routes on how to get to the destination, by different modes of transport where available. Once you are looking at the map, you can also choose between the different available Map Layers. 
-
-You can of course also visit your site from a desktop or laptop computer, but as those devices do not have a GPS locator, they won't automatically fill in your Current Location.
+Save the widget and check the frontend of the site to see the map image. 
 
 We support this plugin here on Github. Therefore, if you have any questions, need help and/or want to make a feature request, please [open an issue](https://github.com/senlin/so-mobile-map-widget/issues) here.
 
-If you like the Mobile Map Widget plugin, please consider leaving a [review](https://wordpress.org/support/plugin/so-mobile-map-widget/reviews/?rate=5#new-post) or making a [donation](https://so-wp.com/donations/). Thanks!
+If you like the Mobile Map Widget plugin, please consider leaving a [review](https://wordpress.org/support/plugin/so-mobile-map-widget/reviews/?rate=5#new-post) or making a [donation](https://so-wp.com/donations). Thanks!
 
 [Mobile Map Widget](https://so-wp.com/plugin/mobile-map-widget) plugin by SO WP.
 
@@ -64,15 +60,25 @@ The widget takes default settings, so what better location to choose than the ve
 
 ### Do I need a Google Static Maps API-key?
 
-The Google Static Maps API-key is mandatory, get it at [Google Map APIs](https://developers.google.com/maps/documentation/staticmaps/#api_key).
+The Google Static Maps API-key is mandatory, get it at [Google Map APIs](https://cloud.google.com/maps-platform/). **Since July 16, 2018 a valid credit card is required by Google to sign up for the API-key**
+
+### Nothing shows on the frontend
+
+Did you enter a valid Google Static Maps API-key? **Since July 16, 2018 a valid credit card is required by Google to sign up for the API-key** Make sure to go through all the settings, because to be honest Google is not making it very easy to add the key and validate it properly...
 
 ### Where can I sign up for the Google Static Maps API-key?
 
 See above.
 
+### I cannot display a map larger than 640 x 640 pixels
+
+That is a limit Google has put on the use of Static Maps images:
+
+> Static Maps images can be returned in any size up to 640 x 640 pixels.
+
 ### When I use the Customizer to add the Mobile Map Widget I am seeing a lot of PHP Notices or nothing at all. What's wrong?
 
-This only happens if you have not yet added the Google Static Maps API Key. You will need to [generate a new API key](https://developers.google.com/maps/documentation/staticmaps/#api_key) and add it to the widget settings. Once you have, the widget will automatically auto-refresh (WP 4.5 and above) and you will now see a map instead.
+This only happens if you have not yet added the Google Static Maps API Key. You will need to [generate a new API key](https://cloud.google.com/maps-platform/) and add it to the widget settings. Once you have, the widget will automatically auto-refresh (WP 4.5 and above) and you will now see a map instead.
 
 ## License
 
@@ -93,19 +99,21 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 
 [Github](https://github.com/senlin) 
 
-[LinkedIn](https://www.linkedin.com/in/pietbos) 
+[LinkedIn](https://www.linkedin.com/in/pieterbos83/) 
 
 [WordPress](https://profiles.wordpress.org/senlin/) 
 
 ## Changelog
 
-### 2017.105
+### 2018.814
 
-* October 5, 2017
-* remove link to find coordinates as it no longer works
+* August 14, 2018
+* change link to find coordinates
+* add details new Google API requirements
+* edit readme files with new FAQ entries among others
 * change some links due to renewal SO WP website
 * clean up irrelevant screenshots
-
+* add new screenshots
 
 ### 2017.6.1
 

@@ -1,8 +1,8 @@
 <?php /*
 Plugin Name: Mobile Map Widget
 Plugin URI: https://so-wp.com/plugin/mobile-map-widget
-Description: This widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is mandatory.
-Version: 2017.105
+Description: This widget adds a mobile-optimised Google Static Maps Image with a colored pin centered on a destination of your choosing. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is required.
+Version: 2018.814
 Author: SO WP
 Author URI: https://so-wp.com
 Text Domain: so-mobile-map-widget
@@ -157,7 +157,7 @@ class SO_MobileMapWidget extends WP_Widget {
 		<input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" class="widefat" />
 	</p>
 	<p>
-		<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Fill in the exact address of the location you want to show on the map; also takes coordinates.', 'so-mobile-map-widget' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Fill in the exact address of the location you want to show on the map; also takes coordinates, which you can check <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank">here</a>.', 'so-mobile-map-widget' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" type="text" value="<?php echo esc_attr( $instance['address'] ); ?>" /></p>
 	<p>
 		<label for="<?php echo $this->get_field_id( 'color' ); ?>"><?php _e( 'Color, choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.', 'so-mobile-map-widget' ); ?></label>
@@ -168,15 +168,15 @@ class SO_MobileMapWidget extends WP_Widget {
 		<input type="number" name="<?php echo $this->get_field_name( 'zoom' ); ?>" value="<?php echo $instance['zoom']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'zoom' ); ?>" />
 	</p>
 	<p>
-		<label for="<?php echo $this->get_field_id( 'width' ); ?>"><?php _e( 'Width in px:', 'so-mobile-map-widget' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'width' ); ?>"><?php _e( 'Width in px (max 640):', 'so-mobile-map-widget' ); ?></label>
 		<input type="number" name="<?php echo $this->get_field_name( 'width' ); ?>" value="<?php echo $instance['width']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'width' ); ?>" />
 	</p>
 	<p>
-		<label for="<?php echo $this->get_field_id( 'height' ); ?>"><?php _e( 'Height in px:', 'so-mobile-map-widget' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'height' ); ?>"><?php _e( 'Height in px (max 640):', 'so-mobile-map-widget' ); ?></label>
 		<input type="number" name="<?php echo $this->get_field_name( 'height' ); ?>" value="<?php echo $instance['height']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'height' ); ?>" />
 	</p>
 	<p>
-		<label for="<?php echo $this->get_field_id( 'apikey' ); ?>"><?php _e( 'Google Static Maps API Key (<strong>REQUIRED</strong>, get it <a href="https://developers.google.com/maps/documentation/staticmaps/#api_key" target="_blank">here</a>):', 'so-mobile-map-widget' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'apikey' ); ?>"><?php _e( 'Google Static Maps API Key (<strong>REQUIRED</strong>, get it <a href="https://cloud.google.com/maps-platform/#get-started" target="_blank">here</a>):', 'so-mobile-map-widget' ); ?></label>
 		<input type="text" name="<?php echo $this->get_field_name( 'apikey' ); ?>" value="<?php echo $instance['apikey']; ?>" class="widefat" id="<?php echo $this->get_field_id( 'apikey' ); ?>" />
 	</p>
 	<p>
