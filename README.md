@@ -105,7 +105,7 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 
 ## Changelog
 
-### 2018.814
+### 2018.814  (2.4.1)
 
 * August 14, 2018
 * change link to find coordinates
@@ -115,7 +115,7 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 * clean up irrelevant screenshots
 * add new screenshots
 
-### 2017.6.1
+### 2017.6.1 (2.4.0)
 
 * June 1, 2017
 * change default location and pin color
@@ -123,12 +123,12 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 * remove redundant language files
 * verified compatibility WP 4.8
 
-### 2017.4.12
+### 2017.4.12 (2.3.1)
 
 * April 12, 2017
 * change http links to https, props [@senatorman](https://wordpress.org/support/users/senatorman/)
 
-### 2016.11.29
+### 2016.11.29 (2.3.0)
 
 * November 29, 2016
 * fix typo in settings that link to help map to get coordinates
@@ -137,24 +137,24 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 * tested up to WP 4.7
 
 
-### 2016.3.31
+### 2016.3.31 (2.2.0)
 
 * March 31, 2016
 * implement selective refresh support for Customizer (WP 4.5 feature)
 * adjust FAQ
 * bump minimum required WP version up to 4.2
 
-### 2015.7.7
+### 2015.7.7 (2.1.0)
 
 * July 7, 2015
 * in WP 4.3 PHP 4 style constructors are deprecated, the plugin contained such a constructor, therefore replaced with PHP 5 style constructor
 
-### 2015.04.09
+### 2015.04.09 (2.0.1)
 
 * changed logos
 * new banner image for WP.org Repo by [Sylwia Bartyzel](https://unsplash.com/sylwiabartyzel)
 
-### 2014.07.30
+### 2014.07.30 (2.0.0)
 
 * The location field now also takes an address (credits Google Maps Widget - https://www.googlemapswidget.com/)
 * Add transient (credits Google Maps Widget - https://www.googlemapswidget.com/)
@@ -162,28 +162,28 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 * Tested up to WP 4.0-beta2
 * Bump minimum required WP version up to 3.8
 
-### 2014.04.27
+### 2014.04.27 (1.4.0)
 
 * Change input type to number for zoom, width and height to address [issue #2](https://github.com/senlin/so-mobile-map-widget/issues/2) and adjust FAQ
 * Add `format=jpg` to map parameters to allow for the smallest size and progressive loading of the image
 * Fix typo textdomain function
 * Move minimum required WP version up to 3.7
 
-### 2014.04.16
+### 2014.04.16 (1.3.2)
 
 * Made sure that Widget Preview (WP 3.9 feature) works for the plugin
 
-### 2013.12.25
+### 2013.12.25 (1.3.1)
 
 * Tested up to WP 3.9-alpha
 * Change format version numbers
 * Add widget default values to get rid of `undefined index` error
 
-### 0.4.1
+### 0.4.1 (1.3.0)
 
 * change text domain to prepare for language packs (via Otto - http://otto42.com/el)
 
-### v0.4
+### 0.4 (1.2.0)
 
 * Add version check
 * Update minimum required version (WP 3.6)
@@ -192,11 +192,11 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 * [HTML5 Validation](https://github.com/so-wp/so-mobile-map-widget/issues/3) suggested by [jecdk](https://github.com/jecdk)
 * add [visual refresh parameter](https://github.com/so-wp/so-mobile-map-widget/issues/2)
 
-### v0.2
+### 0.2 (1.1.0)
 
 * added optional description field
 
-###v0.1
+### 0.1 (1.0.0)
 
 * release version
 
