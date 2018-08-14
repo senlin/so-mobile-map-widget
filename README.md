@@ -204,6 +204,6 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 
 Preview of the widget in the backend and on the frontend.
 
-![Widget Settings in the WordPress backend.](assets/screenshot-1.jpg "Widget Backend")
+![Widget Settings in the WordPress backend.](assets/screenshot-1.png "Widget Backend")
 ---
-![The widget showing the Google Static Map Image of your destination (frontend).](assets/screenshot-2.jpg "Widget Frontend")
+![The widget showing the Google Static Map Image of your destination (frontend).](assets/screenshot-2.png "Widget Frontend")
