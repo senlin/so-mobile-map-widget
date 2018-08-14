@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget)
 
-###### Version 2018.814
+###### Version 2.4.1
 ###### requires at least WordPress 4.4
 ###### tested up to 4.9.8
 ###### Author: [Pieter Bos](https://github.com/senlin)
