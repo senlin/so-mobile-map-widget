@@ -4,7 +4,7 @@
 
 ###### Version 2.4.1
 ###### requires at least WordPress 4.4
-###### tested up to 4.9.8
+###### tested up to 5.0
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### [Stable Version](https://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Directory
 ###### [Plugin homepage](https://so-wp.com/plugin/mobile-map-widget)
@@ -107,13 +107,14 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 
 ### 2.4.1
 
-* August 14, 2018
+* October 29, 2018
 * change link to find coordinates
 * add details new Google API requirements
 * edit readme files with new FAQ entries among others
 * change some links due to renewal SO WP website
 * clean up irrelevant screenshots
 * add new screenshots
+* verified compatibility WP 5.0
 
 ### 2.4.0
 

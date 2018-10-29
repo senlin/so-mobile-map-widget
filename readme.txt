@@ -3,7 +3,7 @@ Contributors: senlin
 Donate link: https://so-wp.com/donations
 Tags: google maps, maps, mobile, image
 Requires at least: 4.4
-Tested up to: 4.9.8
+Tested up to: 5.0
 Requires PHP: 5.3
 Stable tag: 2018.814
 License: GPLv2 or later
@@ -66,7 +66,6 @@ Done!
 
 = Where is the settings page? =
 
-You can stop looking, there is none.
 You can adjust all the necessary settings in the widget itself.
 
 A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions and the link opens in a new tab; if I get complaints about the latter I will make it optional.
@@ -112,13 +111,15 @@ Please open an issue on [Github](https://github.com/senlin/so-mobile-map-widget/
 
 = 2018.814 =
 
-* August 14, 2018
+* October 29, 2018
 * change link to find coordinates
 * add details new Google API requirements
 * edit readme files with new FAQ entries among others
 * change some links due to renewal SO WP website
 * clean up irrelevant screenshots
 * add new screenshots
+* verified compatibility WP 5.0
+* verified compatibility ClassicPress 1.0.0
 
 = 2017.105 =
 
