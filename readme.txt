@@ -5,7 +5,7 @@ Tags: google maps, maps, mobile, image
 Requires at least: 4.4
 Tested up to: 5.0
 Requires PHP: 5.3
-Stable tag: 2018.814
+Stable tag: 20182.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -108,6 +108,11 @@ Please open an issue on [Github](https://github.com/senlin/so-mobile-map-widget/
 2. The widget showing the Google Static Maps Image of your destination
 
 == Changelog ==
+
+= 20182.4.2 =
+
+* November 1, 2018
+* fix deprecated function to register the widget
 
 = 2018.814 =
 

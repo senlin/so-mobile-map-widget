@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget)
 
-###### Version 2.4.1
+###### Version 2.4.2
 ###### requires at least WordPress 4.4
 ###### tested up to 5.0
 ###### Author: [Pieter Bos](https://github.com/senlin)
@@ -104,6 +104,12 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 [WordPress](https://profiles.wordpress.org/senlin/) 
 
 ## Changelog
+
+### 2.4.2
+
+* November 1, 2018
+* fix deprecated function to register the widget
+* WP.org version: 20182.4.2
 
 ### 2.4.1
 
