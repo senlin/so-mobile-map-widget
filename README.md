@@ -1,10 +1,11 @@
 # Mobile Map Widget
 
-[![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget)
+[![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget) [![WP compatibility](https://plugintests.com/plugins/so-mobile-map-widget/wp-badge.svg)](https://plugintests.com/plugins/so-mobile-map-widget/latest) [![PHP compatibility](https://plugintests.com/plugins/so-mobile-map-widget/php-badge.svg)](https://plugintests.com/plugins/so-mobile-map-widget/latest) [![ClassicPress tested on version 1.0.1](https://img.shields.io/badge/ClassicPress-1.0.1-03768e.svg?style=flat-round)](https://www.classicpress.net)
 
 ###### Version 2.4.2
 ###### requires at least WordPress 4.4
-###### tested up to 5.0
+###### tested up to WordPress 5.2.2
+###### tested up to ClassicPress 1.0.1
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### [Stable Version](https://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Directory
 ###### [Plugin homepage](https://so-wp.com/plugin/mobile-map-widget)
