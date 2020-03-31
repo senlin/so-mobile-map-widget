@@ -3,7 +3,7 @@ Contributors: senlin
 Donate link: https://so-wp.com/donations
 Tags: google maps, maps, mobile, image
 Requires at least: 4.4
-Tested up to: 5.0
+Tested up to: 5.4
 Requires PHP: 5.3
 Stable tag: 20182.4.2
 License: GPLv2 or later

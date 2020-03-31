@@ -4,18 +4,18 @@
 
 ###### Version 2.4.2
 ###### requires at least WordPress 4.4
-###### tested up to 5.0
+###### tested up to 5.4
 ###### Author: [Pieter Bos](https://github.com/senlin)
 ###### [Stable Version](https://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Directory
 ###### [Plugin homepage](https://so-wp.com/plugin/mobile-map-widget)
 
-This WordPress widget adds a mobile-optimised Google Static Map Image with a colored pin centered on a destination of your choosing.
+This WordPress widget adds a mobile-optimized Google Static Map Image with a colored pin centered on a destination of your choosing.
 
 ## Description
 
-Mobile Map Widget is meant for websites that target browsing via mobile devices. This widget adds a mobile-optimised Static Google Maps Image with a colored pin centered on your destination. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimised for mobile use. Google Static Maps API-key is required.
+Mobile Map Widget is meant for websites that target browsing via mobile devices. This widget adds a mobile-optimized Static Google Maps Image with a colored pin centered on your destination. Once clicked it opens the Google mobile maps website where you can fill in your Current Location if it is not already there. Then you can see the directions from your location to the destination as well as the map with the route of your choice. Optimized for mobile use. Google Static Maps API-key is required.
 
-The reason we developed the Mobile Map Widget as a plugin, is because while implementing the widget for a mobile framework we were building for the hospitality industry, we realised that this widget can come in handy for many other scenarios too. It can for example be added to a company website to help people find the office location from wherever in the city they are. A travel information site can use it to include maps of tourist attractions, bars and restaurants can use it, you can use it to direct people to your new home, it can even come in handy for if you organise a party with a location that is kept secret till the very last moment!
+The reason we developed the Mobile Map Widget as a plugin, is because while implementing the widget for a mobile framework we were building for the hospitality industry, we realized that this widget can come in handy for many other scenarios too. It can for example be added to a company website to help people find the office location from wherever in the city they are. A travel information site can use it to include maps of tourist attractions, bars and restaurants can use it, you can use it to direct people to your new home, it can even come in handy for if you organize a party with a location that is kept secret till the very last moment!
 
 Once activated you can go to your Widgets (in the backend under Appearance or via the Customizer) and drag the Mobile Map Widget to the sidebar of your choice. When you have placed the widget in a sidebar you need to fill in the following data:
 
@@ -27,7 +27,7 @@ Once activated you can go to your Widgets (in the backend under Appearance or vi
  
  4. Zoom level. From 0 (world view) to 21+ (street view); from 15 and up seems to be good for locations in larger cities, but best to check and play around with it a bit.
  
- 5. Width in pixels. The image width will be automatically scaled to optimise for mobile screens.
+ 5. Width in pixels. The image width will be automatically scaled to optimize for mobile screens.
  
  6. Height in pixels.
  
@@ -50,7 +50,7 @@ If you like the Mobile Map Widget plugin, please consider leaving a [review](htt
 You can stop looking, there is none. 
 You can adjust all the necessary settings in the widget itself. 
 
-A few settings are done by default: the scale of the image is set to 2, to optimise it for mobile resolutions and the link opens in a new tab.
+A few settings are done by default: the scale of the image is set to 2, to optimize it for mobile resolutions and the link opens in a new tab.
 
 Please note that the zoom, width and height parameters take a <strong>numerical</strong> value only.
 
