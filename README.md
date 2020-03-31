@@ -1,6 +1,6 @@
 # Mobile Map Widget
 
-[![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget)
+[![plugin version](https://img.shields.io/wordpress/plugin/v/so-mobile-map-widget.svg)](https://wordpress.org/plugins/so-mobile-map-widget) [![WP compatibility](https://plugintests.com/plugins/so-mobile-map-widget/wp-badge.svg)](https://plugintests.com/plugins/so-mobile-map-widget/latest) [![PHP compatibility](https://plugintests.com/plugins/so-mobile-map-widget/php-badge.svg)](https://plugintests.com/plugins/so-mobile-map-widget/latest) [![ClassicPress tested on version 1.0.1](https://img.shields.io/badge/ClassicPress-1.0.1-03768e.svg?style=flat-round)](https://www.classicpress.net)
 
 ###### Version 2.4.2
 ###### requires at least WordPress 4.4
@@ -20,22 +20,22 @@ The reason we developed the Mobile Map Widget as a plugin, is because while impl
 Once activated you can go to your Widgets (in the backend under Appearance or via the Customizer) and drag the Mobile Map Widget to the sidebar of your choice. When you have placed the widget in a sidebar you need to fill in the following data:
 
  1. Title (optional).
- 
+
  2. Destination. Use an address or use the coordinates. The map will also be automatically centered on this location.
- 
+
  3. Color of the pin. You can choose from black, brown, green, purple, yellow, blue, gray, orange, red, white.
- 
+
  4. Zoom level. From 0 (world view) to 21+ (street view); from 15 and up seems to be good for locations in larger cities, but best to check and play around with it a bit.
- 
+
  5. Width in pixels. The image width will be automatically scaled to optimize for mobile screens.
- 
+
  6. Height in pixels.
- 
+
  7. [Google Static Maps API Key](https://cloud.google.com/maps-platform/#get-started) (**REQUIRED**). **Since July 16, 2018 a valid credit card is required by Google to sign up for the API-key**
- 
+
  8. Description (optional). You can use this field to add a description under the map image, for example to inform your visitors that the image is clickable.
- 
-Save the widget and check the frontend of the site to see the map image. 
+
+Save the widget and check the frontend of the site to see the map image.
 
 We support this plugin here on Github. Therefore, if you have any questions, need help and/or want to make a feature request, please [open an issue](https://github.com/senlin/so-mobile-map-widget/issues) here.
 
@@ -47,8 +47,8 @@ If you like the Mobile Map Widget plugin, please consider leaving a [review](htt
 
 ### Where is the settings page?
 
-You can stop looking, there is none. 
-You can adjust all the necessary settings in the widget itself. 
+You can stop looking, there is none.
+You can adjust all the necessary settings in the widget itself.
 
 A few settings are done by default: the scale of the image is set to 2, to optimize it for mobile resolutions and the link opens in a new tab.
 
@@ -97,11 +97,11 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 
 [WP Tips](https://bohanintl.com/wptips/)
 
-[Github](https://github.com/senlin) 
+[Github](https://github.com/senlin)
 
-[LinkedIn](https://www.linkedin.com/in/pieterbos83/) 
+[LinkedIn](https://www.linkedin.com/in/pieterbos83/)
 
-[WordPress](https://profiles.wordpress.org/senlin/) 
+[WordPress](https://profiles.wordpress.org/senlin/)
 
 ## Changelog
 
