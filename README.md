@@ -91,7 +91,7 @@ This only happens if you have not yet added the Google Static Maps API Key. You 
 
 ## Connect with me through
 
-[BHI Consulting for Websites](https://bohanintl.com/)
+[BHI Localization for Websites](https://www.bhi-localization.com/)
 
 [SO WP](https://so-wp.com)
 
