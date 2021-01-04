@@ -7,8 +7,6 @@
 ###### requires at least WordPress 4.4
 ###### tested up to 5.4
 ###### Author: [Pieter Bos](https://github.com/senlin)
-###### [Stable Version](https://wordpress.org/plugins/so-mobile-map-widget/) via WordPress Plugins Directory
-###### [Plugin homepage](https://so-wp.com/plugin/mobile-map-widget)
 
 This WordPress widget adds a mobile-optimized Google Static Map Image with a colored pin centered on a destination of your choosing.
 
